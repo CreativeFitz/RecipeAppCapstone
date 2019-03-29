@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "aud": "auth0|5c9d13c58c11fc101a8c6114",
+      "name": "bob",
+      "id": 1
+    },
+    {
+      "aud": "auth0|5c9e235dd68d8d1035b06ae9",
+      "name": "bobby",
+      "id": 2
+    }
+  ],
+  "recipes": [],
+  "ingredients": []
+}
