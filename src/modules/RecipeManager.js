@@ -4,7 +4,7 @@ const recipeAPIManager = {
         return fetch("http://localhost:5002/recipes")
         .then(recipes => recipes.json());
     },
-    getOne: (id) => fetch(`${remoteURL}/recipes/${id}`).then(recipe => recipe.json()),
+    getOneRecipe: (id) => fetch(`${remoteURL}/recipes/${id}`).then(recipe => recipe.json()),
     put(editedRecipe) {
       return fetch(`${remoteURL}/recipes/${editedRecipe.id}`, {
         method: "PUT",
