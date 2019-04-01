@@ -28,7 +28,7 @@ class ApplicationViews extends Component {
 
   addRecipe = recipeObject =>
     recipeAPIManager.postRecipe(recipeObject)
-      .then(() => recipeAPIManager.getAll())
+      .then(() => recipeAPIManager.getAllRecipes())
       .then(recipes =>
         this.setState({
           recipes: recipes
@@ -67,8 +67,7 @@ class ApplicationViews extends Component {
         <Route exact path="/" component={Welcome} />
         <Route exact path="/callback" component={Callback} />
         <Route
-          exact
-          path="/recipes"
+          exact path="/recipes"
           render={props => {
             if (Auth0Client.isAuthenticated()) {
               return <RecipeList {...props} recipes={this.state.recipes} />;
@@ -79,7 +78,7 @@ class ApplicationViews extends Component {
           }}
         />
          <Route
-          path="/recipes/new"
+          exact path="/recipes/new"
           render={props => {
             return (
               <RecipeNameForm
@@ -90,7 +89,7 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
-          path="/recipes/new/details"
+        exact path="/recipes/new/details"
           render={props => {
             return (
               <RecipeDetailsForm

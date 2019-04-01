@@ -36,7 +36,7 @@ export default class RecipeNameForm extends Component {
     //   When doing extra ingredients and directions, every time you hit the plus sign to add the next ingredient, have it post the 1st ingredient, clear state, print the recently inputed ingredients, restore input field to default so the next ingredient can be added.
     this.props
     .addRecipe(recipe)
-    .then(() => this.props.history.push("/new/details"));
+    .then(() => this.props.history.push("/recipes/new/details"));
 
     }
   };
