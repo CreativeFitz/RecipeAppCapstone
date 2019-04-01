@@ -81,7 +81,7 @@ export default class AnimalForm extends Component {
             />
             <button
             type="submit"
-            onClick= {/*Put a function to post first ingredient to DB, print all directions for recipe, and clear input field*/}
+            // onClick= {/*Put a function to post first ingredient to DB, print all directions for recipe, and clear input field*/}
             className="btn btn-primary"
           >Next Ingredient</button>
           </div>
@@ -98,7 +98,7 @@ export default class AnimalForm extends Component {
             />
             <button
             type="submit"
-            onClick= {/*Put a function to post first direction to DB, print all directions for recipe, and clear input field*/}
+            // onClick= {/*Put a function to post first direction to DB, print all directions for recipe, and clear input field*/}
             className="btn btn-primary"
           >Next Step</button>
           </div>

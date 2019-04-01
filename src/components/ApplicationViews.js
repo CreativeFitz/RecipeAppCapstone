@@ -19,13 +19,13 @@ import RecipeForm from './RecipeLibrary/RecipeNameForm';
 class ApplicationViews extends Component {
 
 
-    state = {
-        users: [],
-        recipes: [],
-        ingredients: []
-    }
+  state = {
+    users: [],
+    recipes: [],
+    ingredients: []
+  }
 
-    addRecipe = recipeObject =>
+  addRecipe = recipeObject =>
     recipeAPIManager.postRecipe(recipeObject)
       .then(() => recipeAPIManager.getAll())
       .then(recipes =>
@@ -34,7 +34,7 @@ class ApplicationViews extends Component {
         })
       );
 
-      addDirection = directionObject =>
+  addDirection = directionObject =>
     directionAPIManager.postDirection(directionObject)
       .then(() => directionAPIManager.getAll())
       .then(directions =>
@@ -43,7 +43,7 @@ class ApplicationViews extends Component {
         })
       );
 
-      addIngredient = ingredientObject =>
+  addIngredient = ingredientObject =>
     ingredientAPIManager.postIngredient(ingredientObject)
       .then(() => ingredientAPIManager.getAll())
       .then(ingredients =>
@@ -52,34 +52,46 @@ class ApplicationViews extends Component {
         })
       );
 
-    componentDidMount () {
-        const newState ={};
-        recipeAPIManager.getAllRecipes()
-            .then(parsedRecipes => {
-                newState.recipes = parsedRecipes;
-            })
+  componentDidMount() {
+    const newState = {};
+    recipeAPIManager.getAllRecipes()
+      .then(parsedRecipes => {
+        newState.recipes = parsedRecipes;
+      })
 
-    }
-    render() {
-        return (
-            <div className="container-div">
-                <Route exact path="/" component={Welcome}/>
-                <Route exact path="/callback" component={Callback} />
-                <Route
-                    exact
-                    path="/login"
-                    render={props => {
-                        if (Auth0Client.isAuthenticated()) {
-                            return <RecipeList {...props} recipes={this.state.recipes} />;
-                        } else {
-                            Auth0Client.signIn();
-                            return null;
-                        }
-                    }}
-                />
-            </div>
-        )
-    }
+  }
+  render() {
+    return (
+      <div className="container-div">
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/callback" component={Callback} />
+        <Route
+          exact
+          path="/recipes"
+          render={props => {
+            if (Auth0Client.isAuthenticated()) {
+              return <RecipeList {...props} recipes={this.state.recipes} />;
+            } else {
+              Auth0Client.signIn();
+              return null;
+            }
+          }}
+        />
+        {/* <Route
+          exact
+          path="/animals"
+          render={props => {
+            if (Auth0Client.isAuthenticated()) {
+              return <AnimalList {...props} animals={this.state.animals} />;
+            } else {
+              Auth0Client.signIn();
+              return null;
+            }
+          }}
+        /> */}
+      </div>
+    )
+  }
 }
 
 
