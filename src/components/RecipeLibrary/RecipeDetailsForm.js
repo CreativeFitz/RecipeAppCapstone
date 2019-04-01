@@ -6,7 +6,8 @@ export default class RecipeDetailsForm extends Component {
     state = {
         recipeId: "",
         ingredients: "",
-        directions: ""
+        directions: "",
+        recipe: ""
     };
 
     handleFieldChange = evt => {
@@ -32,9 +33,18 @@ export default class RecipeDetailsForm extends Component {
            };
         }};
 
+        componentDidMount() {
+            RecipeManager.getOneRecipe(this.props.match.params.recipesId).then(recipe => {
+              this.setState({
+                recipe: recipe.name,
+                recipeId: recipe.Id
+              });
+            });
+          }
+
            render() {
             return (
-              <React.Fragment>{/* INPUT FIELD AND BUTTON FOR INGREDIENT */}
+              <React.Fragment>{/* INPUT FIELD FOR INGREDIENT */}
               <form className="recipeDetailsForm">
               <div className="form-group">
                 <label htmlFor="ingredient">Ingredient</label>
