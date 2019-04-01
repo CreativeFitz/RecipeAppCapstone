@@ -16,7 +16,13 @@
       "id": 3
     }
   ],
-  "recipes": [],
+  "recipes": [
+    {
+      "name": "Spaghetti",
+      "userId": 3,
+      "id": 1
+    }
+  ],
   "directions": [],
   "ingredients": []
 }

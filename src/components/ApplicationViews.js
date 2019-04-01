@@ -14,7 +14,8 @@ import ingredientAPIManager from '../modules/IngredientManager'
 // Page Components//
 import Welcome from './WelcomeScreen/Welcome'
 import RecipeList from '../components/RecipeLibrary/RecipeList';
-import RecipeForm from './RecipeLibrary/RecipeNameForm';
+import RecipeNameForm from './RecipeLibrary/RecipeNameForm';
+import RecipeDetailsForm from './RecipeLibrary/RecipeDetailsForm'
 
 class ApplicationViews extends Component {
 
@@ -77,18 +78,28 @@ class ApplicationViews extends Component {
             }
           }}
         />
-        {/* <Route
-          exact
-          path="/animals"
+         <Route
+          path="/recipes/new"
           render={props => {
-            if (Auth0Client.isAuthenticated()) {
-              return <AnimalList {...props} animals={this.state.animals} />;
-            } else {
-              Auth0Client.signIn();
-              return null;
-            }
+            return (
+              <RecipeNameForm
+                {...props}
+                addRecipe={this.addRecipe}
+              />
+            );
           }}
-        /> */}
+        />
+        <Route
+          path="/recipes/new/details"
+          render={props => {
+            return (
+              <RecipeDetailsForm
+                {...props}
+                addRecipe={this.addRecipe}
+              />
+            );
+          }}
+        />
       </div>
     )
   }
