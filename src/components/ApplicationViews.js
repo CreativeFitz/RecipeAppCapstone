@@ -2,14 +2,20 @@ import { Route, Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import Auth0Client from './authentication/Auth';
 import Callback from './authentication/Callback';
-import RecipeList from '../components/RecipeLibrary/RecipeList';
-import RecipeForm from './RecipeLibrary/RecipeNameForm';
+
 
 // API handling functions //////////
 import recipeAPIManager from '../modules/RecipeManager'
 import directionAPIManager from '../modules/DirectionManager'
 import ingredientAPIManager from '../modules/IngredientManager'
 //////////////////////////////
+
+
+// Page Components//
+import Welcome from './WelcomeScreen/Welcome'
+import RecipeList from '../components/RecipeLibrary/RecipeList';
+import RecipeForm from './RecipeLibrary/RecipeNameForm';
+
 class ApplicationViews extends Component {
 
 
@@ -57,10 +63,11 @@ class ApplicationViews extends Component {
     render() {
         return (
             <div className="container-div">
+                <Route exact path="/" component={Welcome}/>
                 <Route exact path="/callback" component={Callback} />
                 <Route
                     exact
-                    path="/"
+                    path="/login"
                     render={props => {
                         if (Auth0Client.isAuthenticated()) {
                             return <RecipeList {...props} recipes={this.state.recipes} />;

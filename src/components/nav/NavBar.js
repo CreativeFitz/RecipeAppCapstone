@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import auth0Client from "../authentication/Auth";
@@ -15,15 +16,20 @@ class NavBar extends Component {
  render() {
    return (
      <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
-       <Link className="navbar-brand" to="/">
-         Kennel
-       </Link>
        {!auth0Client.isAuthenticated() ? (
          <button className="btn btn-success" onClick={auth0Client.signIn}>
            Sign In
          </button>
        ) : (
          <React.Fragment>
+
+           <ul className="nav nav-pills">
+             <li className="nav-item">
+               <Link className="nav-link" to="/">
+                 Recipe Library
+               </Link>
+             </li>
+           </ul>
            <div>
              <label className="mr-2 text-blue">
                {auth0Client.getProfile().name}
@@ -37,13 +43,6 @@ class NavBar extends Component {
                Sign Out
              </button>
            </div>
-           <ul className="nav nav-pills">
-             <li className="nav-item">
-               <Link className="nav-link" to="/">
-                 Recipe Library
-               </Link>
-             </li>
-           </ul>
          </React.Fragment>
        )}
      </nav>
