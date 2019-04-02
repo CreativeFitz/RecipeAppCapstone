@@ -23,7 +23,8 @@ class ApplicationViews extends Component {
   state = {
     users: [],
     recipes: [],
-    ingredients: []
+    ingredients: [],
+    directions: []
   }
 
   addRecipe = recipeObject =>
@@ -37,7 +38,7 @@ class ApplicationViews extends Component {
 
   addDirection = directionObject =>
     directionAPIManager.postDirection(directionObject)
-      .then(() => directionAPIManager.getAll())
+      .then(() => directionAPIManager.getAllDirections())
       .then(directions =>
         this.setState({
           directions: directions
@@ -46,7 +47,7 @@ class ApplicationViews extends Component {
 
   addIngredient = ingredientObject =>
     ingredientAPIManager.postIngredient(ingredientObject)
-      .then(() => ingredientAPIManager.getAll())
+      .then(() => ingredientAPIManager.getAllIngredients())
       .then(ingredients =>
         this.setState({
           ingredients: ingredients
@@ -94,6 +95,8 @@ class ApplicationViews extends Component {
             return (
               <RecipeDetailsForm
                 {...props}
+                ingredients={this.state.ingredients}
+                directions={this.state.directions}
                 addDirection={this.addDirection}
                 addIngredient={this.addIngredient}
               />

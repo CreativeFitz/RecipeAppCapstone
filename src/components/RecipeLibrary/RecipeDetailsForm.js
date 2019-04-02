@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import RecipeManager from "../../modules/RecipeManager"
 
+// Need to add the name of the recipe you are currently inputting details for at the top of the page.
+
+
 export default class RecipeDetailsForm extends Component {
 
     state = {
@@ -14,74 +17,97 @@ export default class RecipeDetailsForm extends Component {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
-      };
+    };
 
-      constructNewRecipeDetails = evt => {
+    constructNewRecipeIngredient = evt => {
         evt.preventDefault();
         if (this.state.ingredients === "") {
-          window.alert("Please enter your ingredients");
-        } else if (this.state.directions === ""){window.alert("Please enter your directions");}
-        // CHECK TO MAKE SURE THE ELSE IF IS BEING HIT
+            window.alert("Please enter your ingredients");
+        }
         else {
-           const direction = {
-            direction: this.state.direction,
-            // recipeId: Id from recently posted recipe
-           };
-           const ingredient = {
-               ingredient: this.state.ingredient,
-            // recipeId: Id from recently posted recipe
-           };
-        }};
+            const ingredient = {
+                ingredient: this.state.ingredients,
+                recipeId: this.props.match.params.recipeId
+            };
+            this.props.addIngredient(ingredient)
+                .then(this.setState({ ingredients: "" }))
+                .then()
+        }
+    };
 
-        componentDidMount() {
-            RecipeManager.getOneRecipe(this.props.match.params.recipesId).then(recipe => {
-              this.setState({
+    constructNewRecipeDirection = evt => {
+        evt.preventDefault();
+        if (this.state.directions === "") { window.alert("Please enter your directions"); }
+
+        else {
+            const direction = {
+                direction: this.state.directions,
+                recipeId: this.props.match.params.recipeId
+            };
+            this.props.addDirection(direction)
+                .then(this.setState({ directions: "" }))
+        }
+    };
+
+    componentDidMount() {
+        RecipeManager.getOneRecipe(this.props.match.params.recipesId).then(recipe => {
+            this.setState({
                 recipe: recipe.name,
                 recipeId: recipe.Id
-              });
             });
-          }
+        });
+    }
 
-           render() {
-            return (
-              <React.Fragment>{/* INPUT FIELD FOR INGREDIENT */}
-              <form className="recipeDetailsForm">
-              <div className="form-group">
-                <label htmlFor="ingredient">Ingredient</label>
-                <input
-                  type="text"
-                  required
-                  className="form-control"
-                  onChange={this.handleFieldChange}
-                  id="ingredient"
-                  placeholder="Ingredient"
-                />
-                <button
-                type="submit"
-                // onClick= {/*Put a function to post first ingredient to DB, print all directions for recipe, and clear input field*/}
-                className="btn btn-primary"
-              >Next Ingredient</button>
-              </div>
-            {/* Input field and button for directions */}
-              <div className="form-group">
-                <label htmlFor="direction">Direction</label>
-                <input
-                  type="text"
-                  required
-                  className="form-control"
-                  onChange={this.handleFieldChange}
-                  id="directions"
-                  placeholder="Direction"
-                />
-                <button
-                type="submit"
-                // onClick= {/*Put a function to post first direction to DB, print all directions for recipe, and clear input field*/}
-                className="btn btn-primary"
-              >Next Direction</button>
-              </div>
-              </form>
-              </React.Fragment>
+    render() {
+        return (
+            <React.Fragment>{/* INPUT FIELD FOR INGREDIENT */}
+                <form className="recipeDetailsForm">
+                    <div className="form-group">
+                        <label htmlFor="ingredient">Ingredients</label>
+                        <ul className="IngredientList">
+                            {this.props.ingredients.map(singleIngredient => {
+                                return <p className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}</p>
+                            })}
+                        </ul>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="ingredients"
+                            placeholder="example: 1 cup of cheese"
+                        />
+                        <button
+                            type="submit"
+                            onClick={this.constructNewRecipeIngredient}
+                            className="btn btn-primary"
+                        >Next Ingredient</button>
+                    </div>
+                    {/* Input field and button for directions */}
+                    <div className="form-group">
+                        <label htmlFor="direction">Directions</label>
+                        <ul className="DirectionsList">
+                        {this.props.directions.map(singleDirection => {
+                                return <p className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}</p>
+                            })}
+                        </ul>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="directions"
+                            placeholder="ex. Preheat oven to 450 degrees"
+                        />
+                        <button
+                            type="submit"
+                            onClick={this.constructNewRecipeDirection}
+                            className="btn btn-primary"
+                        >Next Direction</button>
+                    </div>
+                </form>
+            </React.Fragment>
 
-            );
-}
+        );
+    }
 }

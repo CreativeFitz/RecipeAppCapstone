@@ -21,8 +21,45 @@
       "name": "Spaghetti",
       "userId": 3,
       "id": 1
+    },
+    {
+      "name": "Noodles",
+      "userId": null,
+      "id": 2
+    },
+    {
+      "name": "Spaghetti",
+      "userId": null,
+      "id": 3
     }
   ],
-  "directions": [],
-  "ingredients": []
+  "directions": [
+    {
+      "direction": "Preheat the Bologna to burning",
+      "recipeId": "3",
+      "id": 1
+    }
+  ],
+  "ingredients": [
+    {
+      "ingredient": "1 cup of cheese",
+      "recipeId": "2",
+      "id": 1
+    },
+    {
+      "ingredient": "2 cup of cheese",
+      "recipeId": "2",
+      "id": 2
+    },
+    {
+      "ingredient": "Bologna",
+      "recipeId": "3",
+      "id": 3
+    },
+    {
+      "ingredient": "alot of bologna",
+      "recipeId": "3",
+      "id": 4
+    }
+  ]
 }

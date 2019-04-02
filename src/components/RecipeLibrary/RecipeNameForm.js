@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import RecipeManager from "../../modules/RecipeManager"
+
 
 
 // WAITING ON ANSWER TO PULLING ID FROM CORRECT RECIPE FOR DIRECTIONS AND INGREDIENTS
