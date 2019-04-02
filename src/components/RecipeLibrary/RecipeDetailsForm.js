@@ -64,20 +64,20 @@ export default class RecipeDetailsForm extends Component {
               </div>
             {/* Input field and button for directions */}
               <div className="form-group">
-                <label htmlFor="direction">Step</label>
+                <label htmlFor="direction">Direction</label>
                 <input
                   type="text"
                   required
                   className="form-control"
                   onChange={this.handleFieldChange}
-                  id="ingredient"
-                  placeholder="Ingredient"
+                  id="directions"
+                  placeholder="Direction"
                 />
                 <button
                 type="submit"
                 // onClick= {/*Put a function to post first direction to DB, print all directions for recipe, and clear input field*/}
                 className="btn btn-primary"
-              >Next Step</button>
+              >Next Direction</button>
               </div>
               </form>
               </React.Fragment>

@@ -28,12 +28,12 @@ class ApplicationViews extends Component {
 
   addRecipe = recipeObject =>
     recipeAPIManager.postRecipe(recipeObject)
-      .then(() => recipeAPIManager.getAllRecipes())
-      .then(recipes =>
-        this.setState({
-          recipes: recipes
-        })
-      );
+      // .then(() => recipeAPIManager.getAllRecipes())
+      // .then(recipes =>
+      //   this.setState({
+      //     recipes: recipes
+      //   })
+      // );
 
   addDirection = directionObject =>
     directionAPIManager.postDirection(directionObject)
@@ -89,12 +89,13 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
-        exact path="/recipes/new/details"
+        exact path="/recipes/:recipeId(\d+)/details"
           render={props => {
             return (
               <RecipeDetailsForm
                 {...props}
-                addRecipe={this.addRecipe}
+                addDirection={this.addDirection}
+                addIngredient={this.addIngredient}
               />
             );
           }}
