@@ -49,6 +49,11 @@ export default class RecipeDetailsForm extends Component {
         }
     };
 
+    returnToLibrary = evt => {
+        evt.preventDefault();
+        this.props.history.push("/recipes")
+    }
+
     componentDidMount() {
         RecipeManager.getOneRecipe(this.props.match.params.recipesId).then(recipe => {
             this.setState({
@@ -104,6 +109,12 @@ export default class RecipeDetailsForm extends Component {
                             onClick={this.constructNewRecipeDirection}
                             className="btn btn-primary"
                         >Next Direction</button>
+                        <div className="returnButton"><button
+                            type="submit"
+                            onClick={this.returnToLibrary}
+                            className="btn btn-primary"
+                        >Submit Recipe</button>
+                        </div>
                     </div>
                 </form>
             </React.Fragment>

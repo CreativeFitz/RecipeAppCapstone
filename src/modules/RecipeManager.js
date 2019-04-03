@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:5002"
 const recipeAPIManager = {
     getAllRecipes: () => {
-        return fetch("http://localhost:5002/recipes")
+        return fetch(`${remoteURL}/recipes?_expand=user`)
         .then(recipes => recipes.json());
     },
     getOneRecipe: (id) => fetch(`${remoteURL}/recipes/${id}`).then(recipe => recipe.json()),

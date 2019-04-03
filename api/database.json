@@ -18,19 +18,9 @@
   ],
   "recipes": [
     {
-      "name": "Spaghetti",
+      "name": "Hamburger Helper",
       "userId": 3,
       "id": 1
-    },
-    {
-      "name": "Noodles",
-      "userId": null,
-      "id": 2
-    },
-    {
-      "name": "Spaghetti",
-      "userId": null,
-      "id": 3
     }
   ],
   "directions": [
@@ -38,6 +28,36 @@
       "direction": "Preheat the Bologna to burning",
       "recipeId": "3",
       "id": 1
+    },
+    {
+      "direction": "Preheat the Bologna to burning",
+      "recipeId": "10",
+      "id": 2
+    },
+    {
+      "direction": "Set those beans to burn",
+      "recipeId": "11",
+      "id": 3
+    },
+    {
+      "direction": "Burn that skillet",
+      "recipeId": "12",
+      "id": 4
+    },
+    {
+      "direction": "Cook hamburger until brown",
+      "recipeId": "1",
+      "id": 5
+    },
+    {
+      "direction": "Pour in seasoning, milk and water. Stir until thoroughly mixed.",
+      "recipeId": "1",
+      "id": 6
+    },
+    {
+      "direction": "Simmer for 15 mins until noodles are cooked.",
+      "recipeId": "1",
+      "id": 7
     }
   ],
   "ingredients": [
@@ -60,6 +80,41 @@
       "ingredient": "alot of bologna",
       "recipeId": "3",
       "id": 4
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "10",
+      "id": 5
+    },
+    {
+      "ingredient": "beans",
+      "recipeId": "11",
+      "id": 6
+    },
+    {
+      "ingredient": "Ham",
+      "recipeId": "12",
+      "id": 7
+    },
+    {
+      "ingredient": "Cheese",
+      "recipeId": "12",
+      "id": 8
+    },
+    {
+      "ingredient": "1 lb of Hamburger",
+      "recipeId": "1",
+      "id": 9
+    },
+    {
+      "ingredient": "2 cups of milk",
+      "recipeId": "1",
+      "id": 10
+    },
+    {
+      "ingredient": "1 cup of water",
+      "recipeId": "1",
+      "id": 11
     }
   ]
 }

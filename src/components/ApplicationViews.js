@@ -57,9 +57,9 @@ class ApplicationViews extends Component {
   componentDidMount() {
     const newState = {};
     recipeAPIManager.getAllRecipes()
-      .then(parsedRecipes => {
-        newState.recipes = parsedRecipes;
-      })
+      .then(recipes => (
+        newState.recipes = recipes))
+      .then(() => this.setState(newState))
 
   }
   render() {

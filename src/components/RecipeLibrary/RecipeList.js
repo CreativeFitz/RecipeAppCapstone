@@ -18,9 +18,8 @@ export default class RecipeList extends Component {
           </button>
         </div>
         <section className="recipes">
-          {this.props.recipes.map(singleRecipe=> (
-            <RecipeCard key={singleRecipe.id} recipe={singleRecipe} />
-          ))}
+        {this.props.recipes.map(singleRecipe => (
+        <RecipeCard key={singleRecipe.id} recipe={singleRecipe} /> ))}
         </section>
       </React.Fragment>
     );

@@ -9,7 +9,7 @@ export default class RecipeCard extends Component {
           <h5 className="card-title">
             {this.props.recipe.name}
             {/* Instead of using a link maybe switch it over to a button. */}
-            <Link className="nav-link" to={`/animals/${this.props.recipe.id}`}>
+            <Link className="nav-link" to={`/recipes/${this.props.recipe.id}`}>
               Ingredients and Steps
             </Link>
           </h5>
