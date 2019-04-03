@@ -21,6 +21,11 @@
       "name": "Hamburger Helper",
       "userId": 3,
       "id": 1
+    },
+    {
+      "name": "Mac and Cheese",
+      "userId": 3,
+      "id": 2
     }
   ],
   "directions": [
@@ -58,6 +63,21 @@
       "direction": "Simmer for 15 mins until noodles are cooked.",
       "recipeId": "1",
       "id": 7
+    },
+    {
+      "direction": "Bring water to a boil",
+      "recipeId": "2",
+      "id": 8
+    },
+    {
+      "direction": "Pour in macaroni noodles",
+      "recipeId": "2",
+      "id": 9
+    },
+    {
+      "direction": "Drain water",
+      "recipeId": "2",
+      "id": 10
     }
   ],
   "ingredients": [
@@ -115,6 +135,21 @@
       "ingredient": "1 cup of water",
       "recipeId": "1",
       "id": 11
+    },
+    {
+      "ingredient": "1 block of Velvetta Cheese",
+      "recipeId": "2",
+      "id": 12
+    },
+    {
+      "ingredient": "2 cups of Milk",
+      "recipeId": "2",
+      "id": 13
+    },
+    {
+      "ingredient": "3 cups of macaroni noodles",
+      "recipeId": "2",
+      "id": 14
     }
   ]
 }

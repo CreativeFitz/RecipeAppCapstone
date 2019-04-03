@@ -16,6 +16,7 @@ import Welcome from './WelcomeScreen/Welcome'
 import RecipeList from '../components/RecipeLibrary/RecipeList';
 import RecipeNameForm from './RecipeLibrary/RecipeNameForm';
 import RecipeDetailsForm from './RecipeLibrary/RecipeDetailsForm'
+import RecipeDetail from './RecipeLibrary/RecipeDetails'
 
 class ApplicationViews extends Component {
 
@@ -59,6 +60,14 @@ class ApplicationViews extends Component {
     recipeAPIManager.getAllRecipes()
       .then(recipes => (
         newState.recipes = recipes))
+      .then(()=>ingredientAPIManager.getAllIngredients())
+      .then(ingredients => (
+        newState.ingredients=ingredients
+      ))
+      .then(() =>directionAPIManager.getAllDirections())
+      .then(directions => (
+        newState.directions=directions
+      ))
       .then(() => this.setState(newState))
 
   }
@@ -85,6 +94,20 @@ class ApplicationViews extends Component {
               <RecipeNameForm
                 {...props}
                 addRecipe={this.addRecipe}
+              />
+            );
+          }}
+        />
+        <Route
+          exact path="/recipes/:recipeId(\d+)"
+          render={props => {
+            return (
+              <RecipeDetail
+                {...props}
+                recipes=
+                {this.state.recipes}
+                ingredients={this.state.ingredients}
+                directions={this.state.directions}
               />
             );
           }}
