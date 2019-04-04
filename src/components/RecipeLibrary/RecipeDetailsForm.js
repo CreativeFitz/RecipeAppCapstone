@@ -74,7 +74,11 @@ export default class RecipeDetailsForm extends Component {
                         <label htmlFor="ingredient">Ingredients</label>
                         <ul className="IngredientList">
                             {this.props.ingredients.map(singleIngredient => {
+                                if (singleIngredient.recipeId === this.props.match.params.recipeId){
                                 return <p className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}</p>
+                            } else {
+                                return null
+                            }
                             })}
                         </ul>
                         <input
@@ -96,7 +100,12 @@ export default class RecipeDetailsForm extends Component {
                         <label htmlFor="direction">Directions</label>
                         <ul className="DirectionsList">
                             {this.props.directions.map(singleDirection => {
+                                if (singleDirection.recipeId === this.props.match.params.recipeId){
                                 return <p className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}</p>
+                            }
+                            else {
+                                return null
+                            }
                             })}
                         </ul>
                         <input

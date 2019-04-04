@@ -21,6 +21,11 @@
       "name": "Spaghetti",
       "userId": 3,
       "id": 1
+    },
+    {
+      "name": "Hot Dogs",
+      "userId": 3,
+      "id": 2
     }
   ],
   "directions": [
@@ -28,6 +33,16 @@
       "direction": "Boil Noodles",
       "recipeId": "1",
       "id": 1
+    },
+    {
+      "direction": "Boil Water",
+      "recipeId": "2",
+      "id": 2
+    },
+    {
+      "direction": "Dey done when they float",
+      "recipeId": "2",
+      "id": 3
     }
   ],
   "ingredients": [
@@ -35,6 +50,26 @@
       "ingredient": "Meat",
       "recipeId": "1",
       "id": 1
+    },
+    {
+      "ingredient": "Hot Dogs",
+      "recipeId": "2",
+      "id": 2
+    },
+    {
+      "ingredient": "Hot Dogs",
+      "recipeId": "2",
+      "id": 3
+    },
+    {
+      "ingredient": "Buns",
+      "recipeId": "2",
+      "id": 4
+    },
+    {
+      "ingredient": "Mustard",
+      "recipeId": "2",
+      "id": 5
     }
   ]
 }
