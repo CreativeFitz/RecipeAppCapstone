@@ -30,12 +30,21 @@ class ApplicationViews extends Component {
 
   addRecipe = recipeObject =>
     recipeAPIManager.postRecipe(recipeObject)
-      // .then(() => recipeAPIManager.getAllRecipes())
-      // .then(recipes =>
-      //   this.setState({
-      //     recipes: recipes
-      //   })
-      // );
+  // .then(() => recipeAPIManager.getAllRecipes())
+  // .then(recipes =>
+  //   this.setState({
+  //     recipes: recipes
+  //   })
+  // );
+
+  deleteRecipe = id => {
+    return recipeAPIManager.deleteRecipe(id)
+      .then(recipes =>
+        this.setState({
+          recipes: recipes
+        })
+      );
+  };
 
   addDirection = directionObject =>
     directionAPIManager.postDirection(directionObject)
@@ -55,18 +64,29 @@ class ApplicationViews extends Component {
         })
       );
 
+  returnToLibrary = () => {
+    console.log("we're inside return to library!")
+    return recipeAPIManager.getAllRecipes()
+      .then(recipes => {
+        console.log("we're setting state", recipes)
+        this.setState({ recipes: recipes })
+      })
+
+
+  };
+
   componentDidMount() {
     const newState = {};
     recipeAPIManager.getAllRecipes()
       .then(recipes => (
         newState.recipes = recipes))
-      .then(()=>ingredientAPIManager.getAllIngredients())
+      .then(() => ingredientAPIManager.getAllIngredients())
       .then(ingredients => (
-        newState.ingredients=ingredients
+        newState.ingredients = ingredients
       ))
-      .then(() =>directionAPIManager.getAllDirections())
+      .then(() => directionAPIManager.getAllDirections())
       .then(directions => (
-        newState.directions=directions
+        newState.directions = directions
       ))
       .then(() => this.setState(newState))
 
@@ -87,7 +107,7 @@ class ApplicationViews extends Component {
             }
           }}
         />
-         <Route
+        <Route
           exact path="/recipes/new"
           render={props => {
             return (
@@ -108,12 +128,13 @@ class ApplicationViews extends Component {
                 {this.state.recipes}
                 ingredients={this.state.ingredients}
                 directions={this.state.directions}
+                deleteRecipe={this.deleteRecipe}
               />
             );
           }}
         />
         <Route
-        exact path="/recipes/:recipeId(\d+)/details"
+          exact path="/recipes/:recipeId(\d+)/details"
           render={props => {
             return (
               <RecipeDetailsForm
@@ -122,6 +143,7 @@ class ApplicationViews extends Component {
                 directions={this.state.directions}
                 addDirection={this.addDirection}
                 addIngredient={this.addIngredient}
+                returnToLibrary={this.returnToLibrary}
               />
             );
           }}

@@ -15,12 +15,15 @@ const recipeAPIManager = {
       }).then(data => data.json());
     },
     deleteRecipe: (id) => {
-        return fetch(`http://localhost:5002/recipes/${id}`, {
+        return fetch(`${remoteURL}/recipes/${id}`, {
             method: "DELETE"
         })
-        .then(e => e.json()
-        );
-    },
+        .then(() => fetch(`${remoteURL}/recipes`))
+      .then(e => e.json());
+  },
+        // .then(e => e.json()
+        // );
+    // },
     postRecipe(newRecipe) {
         return fetch(`${remoteURL}/recipes`, {
           method: "POST",

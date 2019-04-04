@@ -12,8 +12,7 @@ export default class RecipeDetail extends Component {
     const recipe =
       this.props.recipes.find(
         a => a.id === parseInt(this.props.match.params.recipeId)
-      ) || {};
-      console.log(this.props.recipes, "This!");
+      ) || {}
 
     return (
       <section className="recipe">
@@ -47,7 +46,7 @@ export default class RecipeDetail extends Component {
 
               </ol>
 
-            {/* <button
+            <button
               href="#"
               className="btn btn-danger"
               onClick={() =>
@@ -57,7 +56,7 @@ export default class RecipeDetail extends Component {
               }
             >
               Delete
-            </button> */}
+            </button>
             {/* <button
               type="button"
               className="btn btn-success"

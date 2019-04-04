@@ -46,12 +46,15 @@ export default class RecipeDetailsForm extends Component {
             };
             this.props.addDirection(direction)
                 .then(this.setState({ directions: "" }))
+                .then()
         }
     };
 
-    returnToLibrary = evt => {
+    refresh = evt => {
         evt.preventDefault();
+        this.props.returnToLibrary();
         this.props.history.push("/recipes")
+
     }
 
     componentDidMount() {
@@ -61,7 +64,7 @@ export default class RecipeDetailsForm extends Component {
                 recipeId: recipe.Id
             });
         });
-    }
+    };
 
     render() {
         return (
@@ -92,7 +95,7 @@ export default class RecipeDetailsForm extends Component {
                     <div className="form-group">
                         <label htmlFor="direction">Directions</label>
                         <ul className="DirectionsList">
-                        {this.props.directions.map(singleDirection => {
+                            {this.props.directions.map(singleDirection => {
                                 return <p className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}</p>
                             })}
                         </ul>
@@ -111,7 +114,7 @@ export default class RecipeDetailsForm extends Component {
                         >Next Direction</button>
                         <div className="returnButton"><button
                             type="submit"
-                            onClick={this.returnToLibrary}
+                            onClick={this.refresh}
                             className="btn btn-primary"
                         >Submit Recipe</button>
                         </div>
