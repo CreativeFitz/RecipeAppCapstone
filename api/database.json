@@ -18,138 +18,58 @@
   ],
   "recipes": [
     {
-      "name": "Hamburger Helper",
+      "name": "Spaghetti",
       "userId": 3,
       "id": 1
     },
     {
-      "name": "Mac and Cheese",
+      "name": "Hot Dogs",
       "userId": 3,
       "id": 2
     }
   ],
   "directions": [
     {
-      "direction": "Preheat the Bologna to burning",
-      "recipeId": "3",
+      "direction": "Boil Noodles",
+      "recipeId": "1",
       "id": 1
     },
     {
-      "direction": "Preheat the Bologna to burning",
-      "recipeId": "10",
+      "direction": "Boil Water",
+      "recipeId": "2",
       "id": 2
     },
     {
-      "direction": "Set those beans to burn",
-      "recipeId": "11",
+      "direction": "Dey done when they float",
+      "recipeId": "2",
       "id": 3
-    },
-    {
-      "direction": "Burn that skillet",
-      "recipeId": "12",
-      "id": 4
-    },
-    {
-      "direction": "Cook hamburger until brown",
-      "recipeId": "1",
-      "id": 5
-    },
-    {
-      "direction": "Pour in seasoning, milk and water. Stir until thoroughly mixed.",
-      "recipeId": "1",
-      "id": 6
-    },
-    {
-      "direction": "Simmer for 15 mins until noodles are cooked.",
-      "recipeId": "1",
-      "id": 7
-    },
-    {
-      "direction": "Bring water to a boil",
-      "recipeId": "2",
-      "id": 8
-    },
-    {
-      "direction": "Pour in macaroni noodles",
-      "recipeId": "2",
-      "id": 9
-    },
-    {
-      "direction": "Drain water",
-      "recipeId": "2",
-      "id": 10
     }
   ],
   "ingredients": [
     {
-      "ingredient": "1 cup of cheese",
-      "recipeId": "2",
+      "ingredient": "Meat",
+      "recipeId": "1",
       "id": 1
     },
     {
-      "ingredient": "2 cup of cheese",
+      "ingredient": "Hot Dogs",
       "recipeId": "2",
       "id": 2
     },
     {
-      "ingredient": "Bologna",
-      "recipeId": "3",
+      "ingredient": "Hot Dogs",
+      "recipeId": "2",
       "id": 3
     },
     {
-      "ingredient": "alot of bologna",
-      "recipeId": "3",
+      "ingredient": "Buns",
+      "recipeId": "2",
       "id": 4
     },
     {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": "10",
+      "ingredient": "Mustard",
+      "recipeId": "2",
       "id": 5
-    },
-    {
-      "ingredient": "beans",
-      "recipeId": "11",
-      "id": 6
-    },
-    {
-      "ingredient": "Ham",
-      "recipeId": "12",
-      "id": 7
-    },
-    {
-      "ingredient": "Cheese",
-      "recipeId": "12",
-      "id": 8
-    },
-    {
-      "ingredient": "1 lb of Hamburger",
-      "recipeId": "1",
-      "id": 9
-    },
-    {
-      "ingredient": "2 cups of milk",
-      "recipeId": "1",
-      "id": 10
-    },
-    {
-      "ingredient": "1 cup of water",
-      "recipeId": "1",
-      "id": 11
-    },
-    {
-      "ingredient": "1 block of Velvetta Cheese",
-      "recipeId": "2",
-      "id": 12
-    },
-    {
-      "ingredient": "2 cups of Milk",
-      "recipeId": "2",
-      "id": 13
-    },
-    {
-      "ingredient": "3 cups of macaroni noodles",
-      "recipeId": "2",
-      "id": 14
     }
   ]
 }
