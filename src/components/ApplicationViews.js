@@ -55,6 +55,16 @@ class ApplicationViews extends Component {
         })
       );
 
+      updateDirections = editedDirectionObject => {
+        return directionAPIManager.put(editedDirectionObject)
+          .then(() => directionAPIManager.getAllDirections())
+          .then(directions => {
+            this.setState({
+              directions: directions
+            });
+          });
+      };
+
   addIngredient = ingredientObject =>
     ingredientAPIManager.postIngredient(ingredientObject)
       .then(() => ingredientAPIManager.getAllIngredients())
@@ -63,6 +73,17 @@ class ApplicationViews extends Component {
           ingredients: ingredients
         })
       );
+
+
+      updateIngredients = editedIngredientObject => {
+        return ingredientAPIManager.put(editedIngredientObject)
+          .then(() => ingredientAPIManager.getAllIngredients())
+          .then(ingredients => {
+            this.setState({
+              ingredients: ingredients
+            });
+          });
+      };
 
   returnToLibrary = () => {
     console.log("we're inside return to library!")
@@ -129,6 +150,8 @@ class ApplicationViews extends Component {
                 ingredients={this.state.ingredients}
                 directions={this.state.directions}
                 deleteRecipe={this.deleteRecipe}
+                updateIngredients={this.updateIngredients}
+                updateDirections={this.updateDirections}
               />
             );
           }}
