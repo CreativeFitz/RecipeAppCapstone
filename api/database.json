@@ -26,6 +26,10 @@
       "name": "Mac and Cheese",
       "userId": 3,
       "id": 2
+    },
+    {
+      "userId": null,
+      "id": 3
     }
   ],
   "directions": [
@@ -81,46 +85,6 @@
     }
   ],
   "ingredients": [
-    {
-      "ingredient": "1 cup of cheese",
-      "recipeId": "2",
-      "id": 1
-    },
-    {
-      "ingredient": "2 cup of cheese",
-      "recipeId": "2",
-      "id": 2
-    },
-    {
-      "ingredient": "Bologna",
-      "recipeId": "3",
-      "id": 3
-    },
-    {
-      "ingredient": "alot of bologna",
-      "recipeId": "3",
-      "id": 4
-    },
-    {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": "10",
-      "id": 5
-    },
-    {
-      "ingredient": "beans",
-      "recipeId": "11",
-      "id": 6
-    },
-    {
-      "ingredient": "Ham",
-      "recipeId": "12",
-      "id": 7
-    },
-    {
-      "ingredient": "Cheese",
-      "recipeId": "12",
-      "id": 8
-    },
     {
       "ingredient": "1 lb of Hamburger",
       "recipeId": "1",
