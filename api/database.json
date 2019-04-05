@@ -33,33 +33,43 @@
       "id": 8
     },
     {
-      "name": "Tacos",
+      "name": "Meat Loaf",
       "userId": 3,
-      "id": 10
+      "id": 9
     }
   ],
   "directions": [
     {
       "direction": "Grill",
-      "recipeId": "10",
+      "recipeId": "9",
       "id": 1
-    },
-    {
-      "direction": "Preheat the Bologna to burning",
-      "recipeId": "10",
-      "id": 2
     }
   ],
   "ingredients": [
     {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": "10",
+      "ingredient": "1 cup of angel hair pasta",
+      "recipeId": "9",
       "id": 1
     },
     {
       "ingredient": "Burger",
-      "recipeId": "10",
+      "recipeId": "9",
       "id": 2
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "9",
+      "id": 3
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "9",
+      "id": 4
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "9",
+      "id": 5
     }
   ]
 }

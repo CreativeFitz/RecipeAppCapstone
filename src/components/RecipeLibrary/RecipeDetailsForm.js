@@ -86,6 +86,7 @@ export default class RecipeDetailsForm extends Component {
                             required
                             className="form-control ingredient-input"
                             onChange={this.handleFieldChange}
+                            value={this.state.ingredients}
                             id="ingredients"
                             placeholder="example: 1 cup of cheese"
                         />
@@ -113,6 +114,7 @@ export default class RecipeDetailsForm extends Component {
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
+                            value={this.state.directions}
                             id="directions"
                             placeholder="ex. Preheat oven to 450 degrees"
                         />
@@ -128,7 +130,7 @@ export default class RecipeDetailsForm extends Component {
                                 this.props
                                 .deleteRecipe(this.props.match.params.recipeId)
                                 .then(() => this.props.history.push("/recipes"))
-                                }
+                                    }
                               className="btn btn-primary">Cancel Recipe</button>
                         <button
                             type="submit"
