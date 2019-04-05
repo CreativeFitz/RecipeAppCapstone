@@ -85,6 +85,8 @@ class ApplicationViews extends Component {
           });
       };
 
+
+
   returnToLibrary = () => {
     console.log("we're inside return to library!")
     return recipeAPIManager.getAllRecipes()
@@ -95,6 +97,7 @@ class ApplicationViews extends Component {
 
 
   };
+
 
   componentDidMount() {
     const newState = {};
@@ -115,7 +118,7 @@ class ApplicationViews extends Component {
   render() {
     return (
       <div className="container-div">
-        <Route exact path="/" component={Welcome} />
+        <Route exact path="/" render={()=> {if (Auth0Client.isAuthenticated()){return <Redirect to="/recipes"/>} else { return <Welcome/>}}} />
         <Route exact path="/callback" component={Callback} />
         <Route
           exact path="/recipes"
@@ -131,19 +134,22 @@ class ApplicationViews extends Component {
         <Route
           exact path="/recipes/new"
           render={props => {
-            return (
-              <RecipeNameForm
+            if (Auth0Client.isAuthenticated()) {
+            return <RecipeNameForm
                 {...props}
                 addRecipe={this.addRecipe}
-              />
-            );
+              />;
+            } else {
+              Auth0Client.signIn();
+              return null;
+            }
           }}
         />
         <Route
           exact path="/recipes/:recipeId(\d+)"
           render={props => {
-            return (
-              <RecipeDetail
+            if (Auth0Client.isAuthenticated()) {
+            return <RecipeDetail
                 {...props}
                 recipes=
                 {this.state.recipes}
@@ -152,23 +158,30 @@ class ApplicationViews extends Component {
                 deleteRecipe={this.deleteRecipe}
                 updateIngredients={this.updateIngredients}
                 updateDirections={this.updateDirections}
-              />
-            );
+              />;
+            } else {
+              Auth0Client.signIn();
+              return null;
+            }
           }}
         />
         <Route
           exact path="/recipes/:recipeId(\d+)/details"
           render={props => {
-            return (
-              <RecipeDetailsForm
+            if (Auth0Client.isAuthenticated()) {
+            return <RecipeDetailsForm
                 {...props}
                 ingredients={this.state.ingredients}
                 directions={this.state.directions}
                 addDirection={this.addDirection}
                 addIngredient={this.addIngredient}
                 returnToLibrary={this.returnToLibrary}
-              />
-            );
+                deleteRecipe={this.deleteRecipe}
+              />;
+            } else {
+              Auth0Client.signIn();
+              return null
+            }
           }}
         />
       </div>

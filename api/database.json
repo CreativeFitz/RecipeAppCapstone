@@ -14,36 +14,62 @@
       "aud": "auth0|5ca22a33a92896101436fca0",
       "name": "tim",
       "id": 3
+    },
+    {
+      "aud": "auth0|5ca763534dd4e2115cec971c",
+      "name": "randal",
+      "id": 4
     }
   ],
   "recipes": [
     {
       "name": "Spaghetti",
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "name": "Tacos",
+      "userId": 4,
+      "id": 8
+    },
+    {
+      "name": "Meat Loaf",
       "userId": 3,
-      "id": 1
+      "id": 9
     }
   ],
   "directions": [
     {
-      "direction": "Boil lots of Water",
-      "recipeId": "1",
+      "direction": "Grill",
+      "recipeId": "9",
       "id": 1
     }
   ],
   "ingredients": [
     {
-      "ingredient": "2 lbs of hamburger",
+      "ingredient": "1 cup of angel hair pasta",
+      "recipeId": "9",
       "id": 1
     },
     {
-      "ingredient": "Quit cooking",
-      "recipeId": "1",
+      "ingredient": "Burger",
+      "recipeId": "9",
       "id": 2
     },
     {
-      "ingredient": "The will to quit",
-      "recipeId": "1",
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "9",
       "id": 3
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "9",
+      "id": 4
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "9",
+      "id": 5
     }
   ]
 }

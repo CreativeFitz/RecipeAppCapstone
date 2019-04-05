@@ -20,7 +20,7 @@ editIngredient = evt => {
       id: this.state.IngredientToEdit.id
   };
   this.props.updateIngredients(editedIngredient)
-      .then(this.setState({ IngredientToEdit: "" }))
+      .then( () => this.setState({ IngredientToEdit: "" }))
       .then()
 
 }
@@ -37,7 +37,7 @@ editDirection = evt => {
         id: this.state.DirectionToEdit.id
     };
     this.props.updateDirections(editedDirection)
-        .then(this.setState({ DirectionToEdit: "" }))
+        .then( () => this.setState({ DirectionToEdit: "" }))
         .then()
 
   }
@@ -54,7 +54,7 @@ handleFieldChange = evt => {
 
 render() {
 
-
+  const currentRecipeId = this.props.match.params.recipeId
 
 
     /*
@@ -64,10 +64,12 @@ render() {
         */
     const recipe =
       this.props.recipes.find(
-        a => a.id === parseInt(this.props.match.params.recipeId)
+        a => a.id === parseInt(currentRecipeId)
       ) || {}
 
-    return (
+
+
+      return (
       <section className="recipe">
         <div key={recipe.id} className="card">
           <div className="card-body">
@@ -77,7 +79,7 @@ render() {
             <h5 className="card-title">Ingredients Needed</h5>
               <ul>
                 {this.props.ingredients.map(singleIngredient =>{
-                  if (singleIngredient.recipeId === this.props.match.params.recipeId) {
+                  if (singleIngredient.recipeId === currentRecipeId) {
                     if (singleIngredient.id === this.state.IngredientToEdit.id) {
                       return <div key={this.state.IngredientToEdit.id}><input
                           type="text"
@@ -113,7 +115,7 @@ render() {
               <h5 className="card-title">Directions</h5>
               <ol>
                 {this.props.directions.map(singleDirection =>{
-                  if (singleDirection.recipeId === this.props.match.params.recipeId) {
+                  if (singleDirection.recipeId === currentRecipeId) {
                     if (singleDirection.id === this.state.DirectionToEdit.id) {return <div key={this.state.DirectionToEdit.id}><input
                     type="text"
                     required
@@ -151,19 +153,14 @@ render() {
                   .then(() => this.props.history.push("/recipes"))
               }
             >
-              Delete
+            Delete
             </button>
-            {/* <button
-              type="button"
-              className="btn btn-success"
-              onClick={() => {
-                this.props.history.push(
-                  `/recipes/${recipe.id}/edit`
-                );
-              }}
-            >
-              Edit
-            </button> */}
+            <button
+              href="#"
+              className="btn btn-danger"
+              onClick={() => this.props.history.push(`/recipes/${currentRecipeId}/details`)
+              }
+            >Edit Ingredients or Directions</button>
           </div>
         </div>
       </section>

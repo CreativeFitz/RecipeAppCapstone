@@ -19,7 +19,7 @@ export default class RecipeDetailsForm extends Component {
         this.setState(stateToChange);
     };
 
-    constructNewRecipeIngredient = evt => {
+    constructNewIngredient = evt => {
         evt.preventDefault();
         if (this.state.ingredients === "") {
             window.alert("Please enter your ingredients");
@@ -35,7 +35,7 @@ export default class RecipeDetailsForm extends Component {
         }
     };
 
-    constructNewRecipeDirection = evt => {
+    constructNewDirection = evt => {
         evt.preventDefault();
         if (this.state.directions === "") { window.alert("Please enter your directions"); }
 
@@ -58,7 +58,7 @@ export default class RecipeDetailsForm extends Component {
     }
 
     componentDidMount() {
-        RecipeManager.getOneRecipe(this.props.match.params.recipesId).then(recipe => {
+        RecipeManager.getOneRecipe(this.props.match.params.recipeId).then(recipe => {
             this.setState({
                 recipe: recipe.name,
                 recipeId: recipe.Id
@@ -84,14 +84,15 @@ export default class RecipeDetailsForm extends Component {
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="form-control ingredient-input"
                             onChange={this.handleFieldChange}
+                            value={this.state.ingredients}
                             id="ingredients"
                             placeholder="example: 1 cup of cheese"
                         />
                         <button
                             type="submit"
-                            onClick={this.constructNewRecipeIngredient}
+                            onClick={this.constructNewIngredient}
                             className="btn btn-primary"
                         >Next Ingredient</button>
                     </div>
@@ -113,15 +114,25 @@ export default class RecipeDetailsForm extends Component {
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
+                            value={this.state.directions}
                             id="directions"
                             placeholder="ex. Preheat oven to 450 degrees"
                         />
                         <button
                             type="submit"
-                            onClick={this.constructNewRecipeDirection}
-                            className="btn btn-primary"
-                        >Next Direction</button>
-                        <div className="returnButton"><button
+                            onClick={this.constructNewDirection}
+                            className="btn btn-primary">
+                        Next Direction</button>
+                        <div className="returnButton">
+                        <button
+                            type="submit"
+                            onClick={() =>
+                                this.props
+                                .deleteRecipe(this.props.match.params.recipeId)
+                                .then(() => this.props.history.push("/recipes"))
+                                    }
+                              className="btn btn-primary">Cancel Recipe</button>
+                        <button
                             type="submit"
                             onClick={this.refresh}
                             className="btn btn-primary"
