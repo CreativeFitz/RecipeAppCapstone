@@ -10,7 +10,7 @@ export default class RecipeNameForm extends Component {
   // Set initial state
   state = {
     userId: "",
-    name: ""
+    recipeName: ""
   };
 
   // Update state whenever an input field is edited
