@@ -33,43 +33,53 @@
       "id": 8
     },
     {
-      "name": "Meat Loaf",
+      "name": "Chicken Noodle Soup",
       "userId": 3,
       "id": 9
+    },
+    {
+      "name": "Noodles",
+      "userId": 3,
+      "id": 10
+    },
+    {
+      "name": "Fried Chicken",
+      "userId": 3,
+      "id": 11
     }
   ],
   "directions": [
     {
-      "direction": "Grill",
+      "direction": "Boil a whole lot of water",
       "recipeId": "9",
       "id": 1
+    },
+    {
+      "direction": "Fry it",
+      "recipeId": "11",
+      "id": 2
     }
   ],
   "ingredients": [
     {
-      "ingredient": "1 cup of angel hair pasta",
+      "ingredient": "2 lbs of hamburger",
       "recipeId": "9",
       "id": 1
     },
     {
-      "ingredient": "Burger",
+      "ingredient": "2 slices of Chicken",
       "recipeId": "9",
       "id": 2
     },
     {
-      "ingredient": "2 slices of Chicken",
+      "ingredient": "Burger",
       "recipeId": "9",
       "id": 3
     },
     {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": "9",
+      "ingredient": "Chicken",
+      "recipeId": "11",
       "id": 4
-    },
-    {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": "9",
-      "id": 5
     }
   ]
 }

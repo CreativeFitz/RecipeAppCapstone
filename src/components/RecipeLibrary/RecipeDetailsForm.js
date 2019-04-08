@@ -10,7 +10,12 @@ export default class RecipeDetailsForm extends Component {
         recipeId: "",
         ingredients: "",
         directions: "",
-        recipe: ""
+        recipe: "",
+        userId: "",
+        userEditedDirection: "",
+        IngredientToEdit: {},
+        DirectionToEdit: {},
+        userEditedIngredient: ""
     };
 
     handleFieldChange = evt => {
@@ -50,6 +55,40 @@ export default class RecipeDetailsForm extends Component {
         }
     };
 
+    editIngredient = evt => {
+        evt.preventDefault();
+        const editedIngredient = {
+            ingredient: this.state.userEditedIngredient,
+            recipeId: this.state.IngredientToEdit.recipeId,
+            id: this.state.IngredientToEdit.id
+        };
+        this.props.updateIngredients(editedIngredient)
+            .then( () => this.setState({ IngredientToEdit: "" }))
+            .then()
+
+      };
+
+      generateIngredientForm = (singleIngredient) => {
+        this.setState({ IngredientToEdit: singleIngredient })
+        };
+
+      editDirection = evt => {
+          evt.preventDefault();
+          const editedDirection = {
+              direction: this.state.userEditedDirection,
+              recipeId: this.state.DirectionToEdit.recipeId,
+              id: this.state.DirectionToEdit.id
+          };
+          this.props.updateDirections(editedDirection)
+              .then( () => this.setState({ DirectionToEdit: "" }))
+              .then()
+
+        }
+
+        generateDirectionForm = (singleDirection) => {
+          this.setState({ DirectionToEdit: singleDirection })
+          };
+
     refresh = evt => {
         evt.preventDefault();
         this.props.returnToLibrary();
@@ -75,7 +114,31 @@ export default class RecipeDetailsForm extends Component {
                         <ul className="IngredientList">
                             {this.props.ingredients.map(singleIngredient => {
                                 if (singleIngredient.recipeId === this.props.match.params.recipeId){
-                                return <p className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}</p>
+                                    if (singleIngredient.id === this.state.IngredientToEdit.id) {
+                                        return <div key={this.state.IngredientToEdit.id}><input
+                                            type="text"
+                                            required
+                                            className="form-control"
+                                            onChange={this.handleFieldChange}
+                                            // This is creating an object in state,
+                                            id="userEditedIngredient"
+                                            placeholder={this.state.IngredientToEdit.ingredient}
+                                            // value={this.state.messageToEdit.message}
+                                        />
+                                            <button
+                                                type="submit"
+                                                onClick={this.editIngredient}
+                                                className="btn btn-primary"
+                                            >Submit New Edit</button></div>
+                                      } else {
+                                      return <p className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}
+                                      <button
+                                      type="submit"
+                                      onClick={() => this.generateIngredientForm(singleIngredient)}
+                                      className="btn btn-primary">
+                                      Edit</button></p>
+                                    }
+
                             } else {
                                 return null
                             }
@@ -101,8 +164,27 @@ export default class RecipeDetailsForm extends Component {
                         <label htmlFor="direction">Directions</label>
                         <ul className="DirectionsList">
                             {this.props.directions.map(singleDirection => {
-                                if (singleDirection.recipeId === this.props.match.params.recipeId){
-                                return <p className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}</p>
+                                if (singleDirection.recipeId === this.props.match.params.recipeId){if (singleDirection.id === this.state.DirectionToEdit.id) {return <div key={this.state.DirectionToEdit.id}><input
+                                type="text"
+                                required
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                // This is creating an object in state,
+                                id="userEditedDirection"
+                                placeholder={this.state.DirectionToEdit.direction}
+                                // value={this.state.messageToEdit.message}
+                            />
+                                <button
+                                    type="submit"
+                                    onClick={this.editDirection}
+                                    className="btn btn-primary"
+                                >Submit New Edit</button></div>} else {
+                                return <li className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}<button
+                                type="submit"
+                                onClick={() => this.generateDirectionForm(singleDirection)}
+                                className="btn btn-primary">
+                                Edit</button></li>
+                              }
                             }
                             else {
                                 return null
