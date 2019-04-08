@@ -50,36 +50,51 @@
   ],
   "directions": [
     {
-      "direction": "Boil a whole lot of water",
-      "recipeId": "9",
-      "id": 1
-    },
-    {
       "direction": "Fry it",
       "recipeId": "11",
       "id": 2
+    },
+    {
+      "direction": "Preheat the Bologna to burning",
+      "recipeId": "10",
+      "id": 3
+    },
+    {
+      "direction": "Preheat the Bologna to burning",
+      "recipeId": "10",
+      "id": 4
+    },
+    {
+      "direction": "Fry it",
+      "recipeId": "10",
+      "id": 5
+    },
+    {
+      "direction": "Grill",
+      "recipeId": "9",
+      "id": 6
     }
   ],
   "ingredients": [
     {
-      "ingredient": "2 lbs of hamburger",
-      "recipeId": "9",
-      "id": 1
+      "ingredient": "Chicken",
+      "recipeId": "11",
+      "id": 4
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "10",
+      "id": 5
+    },
+    {
+      "ingredient": "Bologna",
+      "recipeId": "10",
+      "id": 6
     },
     {
       "ingredient": "2 slices of Chicken",
       "recipeId": "9",
-      "id": 2
-    },
-    {
-      "ingredient": "Burger",
-      "recipeId": "9",
-      "id": 3
-    },
-    {
-      "ingredient": "Chicken",
-      "recipeId": "11",
-      "id": 4
+      "id": 7
     }
   ]
 }

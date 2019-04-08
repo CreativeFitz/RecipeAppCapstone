@@ -65,6 +65,16 @@ class ApplicationViews extends Component {
           });
       };
 
+      deleteDirection = id => {
+        return directionAPIManager.deleteDirection(id)
+        .then(() => directionAPIManager.getAllDirections())
+          .then(directions =>
+            this.setState({
+              directions: directions
+            })
+          );
+      };
+
   addIngredient = ingredientObject =>
     ingredientAPIManager.postIngredient(ingredientObject)
       .then(() => ingredientAPIManager.getAllIngredients())
@@ -83,6 +93,16 @@ class ApplicationViews extends Component {
               ingredients: ingredients
             });
           });
+      };
+
+      deleteIngredient = id => {
+        return ingredientAPIManager.deleteIngredient(id)
+        .then(() => ingredientAPIManager.getAllIngredients())
+        .then(ingredients =>
+            this.setState({
+              ingredients: ingredients
+            })
+          );
       };
 
 
@@ -175,6 +195,8 @@ class ApplicationViews extends Component {
                 addIngredient={this.addIngredient}
                 returnToLibrary={this.returnToLibrary}
                 deleteRecipe={this.deleteRecipe}
+                deleteDirection={this.deleteDirection}
+                deleteIngredient={this.deleteIngredient}
                 updateIngredients={this.updateIngredients}
                 updateDirections={this.updateDirections}
               />;
