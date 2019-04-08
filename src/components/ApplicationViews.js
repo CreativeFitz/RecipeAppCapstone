@@ -88,10 +88,8 @@ class ApplicationViews extends Component {
 
 
   returnToLibrary = () => {
-    console.log("we're inside return to library!")
     return recipeAPIManager.getAllRecipes()
       .then(recipes => {
-        console.log("we're setting state", recipes)
         this.setState({ recipes: recipes })
       })
 
@@ -177,6 +175,8 @@ class ApplicationViews extends Component {
                 addIngredient={this.addIngredient}
                 returnToLibrary={this.returnToLibrary}
                 deleteRecipe={this.deleteRecipe}
+                updateIngredients={this.updateIngredients}
+                updateDirections={this.updateDirections}
               />;
             } else {
               Auth0Client.signIn();

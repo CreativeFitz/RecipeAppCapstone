@@ -80,30 +80,9 @@ render() {
               <ul>
                 {this.props.ingredients.map(singleIngredient =>{
                   if (singleIngredient.recipeId === currentRecipeId) {
-                    if (singleIngredient.id === this.state.IngredientToEdit.id) {
-                      return <div key={this.state.IngredientToEdit.id}><input
-                          type="text"
-                          required
-                          className="form-control"
-                          onChange={this.handleFieldChange}
-                          // This is creating an object in state,
-                          id="userEditedIngredient"
-                          placeholder={this.state.IngredientToEdit.ingredient}
-                          // value={this.state.messageToEdit.message}
-                      />
-                          <button
-                              type="submit"
-                              onClick={this.editIngredient}
-                              className="btn btn-primary"
-                          >Submit New Edit</button></div>
-                    } else {
                     return <li className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}
-                    <button
-                    type="submit"
-                    onClick={() => this.generateIngredientForm(singleIngredient)}
-                    className="btn btn-primary">
-                    Edit</button></li>
-                  }}
+                    </li>
+                  }
                   else {
                     return null
                   }
@@ -116,27 +95,8 @@ render() {
               <ol>
                 {this.props.directions.map(singleDirection =>{
                   if (singleDirection.recipeId === currentRecipeId) {
-                    if (singleDirection.id === this.state.DirectionToEdit.id) {return <div key={this.state.DirectionToEdit.id}><input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={this.handleFieldChange}
-                    // This is creating an object in state,
-                    id="userEditedDirection"
-                    placeholder={this.state.DirectionToEdit.direction}
-                    // value={this.state.messageToEdit.message}
-                />
-                    <button
-                        type="submit"
-                        onClick={this.editDirection}
-                        className="btn btn-primary"
-                    >Submit New Edit</button></div>} else {
-                    return <li className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}<button
-                    type="submit"
-                    onClick={() => this.generateDirectionForm(singleDirection)}
-                    className="btn btn-primary">
-                    Edit</button></li>
-                  }}
+                    return <li className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}</li>
+                  }
                   else {
                     return null
                   }
