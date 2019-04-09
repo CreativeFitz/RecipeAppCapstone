@@ -30,7 +30,7 @@
     },
     {
       "name": "Spaghetti",
-      "prepped": false,
+      "prepped": true,
       "userId": 3,
       "id": 13
     },
@@ -39,30 +39,47 @@
       "prepped": true,
       "userId": 2,
       "id": 14
+    },
+    {
+      "name": "Tacos",
+      "prepped": true,
+      "userId": 2,
+      "id": 15
+    },
+    {
+      "name": "spaghetti",
+      "prepped": false,
+      "userId": 3,
+      "id": 16
     }
   ],
   "directions": [
     {
-      "direction": "Preheat the Bologna to burning",
-      "recipeId": "13",
-      "id": 6
+      "direction": "Fry it",
+      "recipeId": 15,
+      "id": 1
     },
     {
       "direction": "Preheat the Bologna to burning",
-      "recipeId": "14",
-      "id": 7
+      "recipeId": "12",
+      "id": 2
     }
   ],
   "ingredients": [
     {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": "13",
-      "id": 7
+      "ingredient": "Burger",
+      "recipeId": 15,
+      "id": 1
     },
     {
       "ingredient": "Burger",
-      "recipeId": "14",
-      "id": 8
+      "recipeId": 16,
+      "id": 2
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": "12",
+      "id": 3
     }
   ]
 }

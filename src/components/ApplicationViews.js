@@ -19,6 +19,7 @@ import RecipeNameForm from './RecipeLibrary/RecipeNameForm';
 import RecipeDetailsForm from './RecipeLibrary/RecipeDetailsForm'
 import RecipeDetail from './RecipeLibrary/RecipeDetails'
 import Meals4Week from './Meals4Week/meals4Week';
+import IngredientsList from './IngredientsList/IngredientsList'
 
 class ApplicationViews extends Component {
 
@@ -27,7 +28,8 @@ class ApplicationViews extends Component {
     users: [],
     recipes: [],
     ingredients: [],
-    directions: []
+    directions: [],
+    meals4Week: []
   }
 
   addRecipe = recipeObject =>
@@ -122,7 +124,8 @@ class ApplicationViews extends Component {
 				recipes: recipes
 			})
 		);
-	};
+  };
+
 
 
   componentDidMount() {
@@ -138,6 +141,10 @@ class ApplicationViews extends Component {
       .then(directions => (
         newState.directions = directions
       ))
+      .then(() => recipeAPIManager.recipesPrepped())
+      .then(meals4week =>(
+        newState.meals4Week = meals4week
+      ))
       .then(() => this.setState(newState))
 
   }
@@ -152,7 +159,7 @@ class ApplicationViews extends Component {
             if (Auth0Client.isAuthenticated()) {
               return <RecipeList {...props} recipes={this.state.recipes} />;
             } else {
-              // Auth0Client.signIn();
+              Auth0Client.signIn();
               return null;
             }
           }}
@@ -166,7 +173,7 @@ class ApplicationViews extends Component {
                 addRecipe={this.addRecipe}
               />;
             } else {
-              // Auth0Client.signIn();
+              Auth0Client.signIn();
               return null;
             }
           }}
@@ -187,7 +194,7 @@ class ApplicationViews extends Component {
                 recipeChecked={this.recipeChecked}
               />;
             } else {
-              // Auth0Client.signIn();
+              Auth0Client.signIn();
               return null;
             }
           }}
@@ -210,7 +217,7 @@ class ApplicationViews extends Component {
                 updateDirections={this.updateDirections}
               />;
             } else {
-              // Auth0Client.signIn();
+              Auth0Client.signIn();
               return null
             }
           }}
@@ -223,7 +230,21 @@ class ApplicationViews extends Component {
             recipes={this.state.recipes}
             />;
           } else {
-            // Auth0Client.signIn();
+            Auth0Client.signIn();
+            return null
+          }
+        }}
+        />
+        <Route exact path="/ingredientsList"
+        render={props=>{
+          if (Auth0Client.isAuthenticated()){
+            return <IngredientsList
+            {...props}
+            recipes={this.state.recipes}
+            meals4Week={this.state.meals4Week}
+            />;
+          } else {
+            Auth0Client.signIn();
             return null
           }
         }}

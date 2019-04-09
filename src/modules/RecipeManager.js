@@ -42,6 +42,10 @@ const recipeAPIManager = {
     body: JSON.stringify(checkedRecipe)
   }).then(data => data.json());
 },
+  recipesPrepped: () => {
+    return fetch(`${remoteURL}/recipes?prepped=true`)
+    .then(recipes => recipes.json());
+}
 
 };
 

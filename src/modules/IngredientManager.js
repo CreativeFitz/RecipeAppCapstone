@@ -29,7 +29,10 @@ const ingredientAPIManager = {
           },
           body: JSON.stringify(newIngredient)
         }).then(data => data.json())
-      }
+      },
+      ingredientsByRecipe: () => {return fetch(`${remoteURL}/messages?_expand=user`)
+      .then(ingredient => ingredient.json())
+  }
 };
 
 export default ingredientAPIManager;
