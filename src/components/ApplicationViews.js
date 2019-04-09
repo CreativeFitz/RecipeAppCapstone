@@ -2,6 +2,7 @@ import { Route, Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import Auth0Client from './authentication/Auth';
 import Callback from './authentication/Callback';
+import "./ApplicationViews.css"
 
 
 // API handling functions //////////
@@ -17,6 +18,7 @@ import RecipeList from '../components/RecipeLibrary/RecipeList';
 import RecipeNameForm from './RecipeLibrary/RecipeNameForm';
 import RecipeDetailsForm from './RecipeLibrary/RecipeDetailsForm'
 import RecipeDetail from './RecipeLibrary/RecipeDetails'
+import Meals4Week from './Meals4Week/meals4Week';
 
 class ApplicationViews extends Component {
 
@@ -112,9 +114,15 @@ class ApplicationViews extends Component {
       .then(recipes => {
         this.setState({ recipes: recipes })
       })
-
-
   };
+
+  recipeChecked = (recipeId, recipeObject) => {
+		return recipeAPIManager.patchRecipeCheck(recipeObject, recipeId).then(() => recipeAPIManager.getAllRecipes()).then((recipes) =>
+			this.setState({
+				recipes: recipes
+			})
+		);
+	};
 
 
   componentDidMount() {
@@ -144,7 +152,7 @@ class ApplicationViews extends Component {
             if (Auth0Client.isAuthenticated()) {
               return <RecipeList {...props} recipes={this.state.recipes} />;
             } else {
-              Auth0Client.signIn();
+              // Auth0Client.signIn();
               return null;
             }
           }}
@@ -158,7 +166,7 @@ class ApplicationViews extends Component {
                 addRecipe={this.addRecipe}
               />;
             } else {
-              Auth0Client.signIn();
+              // Auth0Client.signIn();
               return null;
             }
           }}
@@ -176,9 +184,10 @@ class ApplicationViews extends Component {
                 deleteRecipe={this.deleteRecipe}
                 updateIngredients={this.updateIngredients}
                 updateDirections={this.updateDirections}
+                recipeChecked={this.recipeChecked}
               />;
             } else {
-              Auth0Client.signIn();
+              // Auth0Client.signIn();
               return null;
             }
           }}
@@ -201,10 +210,23 @@ class ApplicationViews extends Component {
                 updateDirections={this.updateDirections}
               />;
             } else {
-              Auth0Client.signIn();
+              // Auth0Client.signIn();
               return null
             }
           }}
+        />
+        <Route exact path="/meals4week"
+        render={props=> {
+          if(Auth0Client.isAuthenticated()){
+            return <Meals4Week
+            {...props}
+            recipes={this.state.recipes}
+            />;
+          } else {
+            // Auth0Client.signIn();
+            return null
+          }
+        }}
         />
       </div>
     )

@@ -42,6 +42,12 @@ editDirection = evt => {
 
   }
 
+handleCheckbox = (evt) => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.checked
+        this.setState(stateToChange)
+    };
+
   generateDirectionForm = (singleDirection) => {
     this.setState({ DirectionToEdit: singleDirection })
     };
@@ -121,6 +127,8 @@ render() {
               onClick={() => this.props.history.push(`/recipes/${currentRecipeId}/details`)
               }
             >Edit Ingredients or Directions</button>
+            <button
+             onClick={() => this.props.recipeChecked({ prepped: true}, parseInt(currentRecipeId))}>Add to This Weeks Meals</button>
           </div>
         </div>
       </section>
