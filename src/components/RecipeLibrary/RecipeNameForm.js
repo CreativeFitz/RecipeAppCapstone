@@ -30,6 +30,7 @@ export default class RecipeNameForm extends Component {
     } else {
       const recipe = {
         name: this.state.recipeName,
+        prepped: false,
         userId: parseInt(sessionStorage.getItem(`credentials`))
        };
 

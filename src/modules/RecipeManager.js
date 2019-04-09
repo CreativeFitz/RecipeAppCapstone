@@ -32,7 +32,17 @@ const recipeAPIManager = {
           },
           body: JSON.stringify(newRecipe)
         }).then(data => data.json())
-      }
+      },
+    patchRecipeCheck(id, checkedRecipe) {
+  return fetch(`http://localhost:5002/recipes/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(checkedRecipe)
+  }).then(data => data.json());
+},
+
 };
 
 export default recipeAPIManager;

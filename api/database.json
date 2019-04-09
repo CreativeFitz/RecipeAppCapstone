@@ -23,78 +23,46 @@
   ],
   "recipes": [
     {
-      "name": "Spaghetti",
-      "userId": 4,
-      "id": 7
-    },
-    {
-      "name": "Tacos",
-      "userId": 4,
-      "id": 8
-    },
-    {
-      "name": "Chicken Noodle Soup",
+      "name": "Baked Steak",
+      "prepped": true,
       "userId": 3,
-      "id": 9
+      "id": 12
+    },
+    {
+      "name": "Spaghetti",
+      "prepped": false,
+      "userId": 3,
+      "id": 13
     },
     {
       "name": "Noodles",
-      "userId": 3,
-      "id": 10
-    },
-    {
-      "name": "Fried Chicken",
-      "userId": 3,
-      "id": 11
+      "prepped": true,
+      "userId": 2,
+      "id": 14
     }
   ],
   "directions": [
     {
-      "direction": "Fry it",
-      "recipeId": "11",
-      "id": 2
-    },
-    {
       "direction": "Preheat the Bologna to burning",
-      "recipeId": "10",
-      "id": 3
-    },
-    {
-      "direction": "Preheat the Bologna to burning",
-      "recipeId": "10",
-      "id": 4
-    },
-    {
-      "direction": "Fry it",
-      "recipeId": "10",
-      "id": 5
-    },
-    {
-      "direction": "Grill",
-      "recipeId": "9",
+      "recipeId": "13",
       "id": 6
+    },
+    {
+      "direction": "Preheat the Bologna to burning",
+      "recipeId": "14",
+      "id": 7
     }
   ],
   "ingredients": [
     {
-      "ingredient": "Chicken",
-      "recipeId": "11",
-      "id": 4
-    },
-    {
       "ingredient": "2 slices of Chicken",
-      "recipeId": "10",
-      "id": 5
-    },
-    {
-      "ingredient": "Bologna",
-      "recipeId": "10",
-      "id": 6
-    },
-    {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": "9",
+      "recipeId": "13",
       "id": 7
+    },
+    {
+      "ingredient": "Burger",
+      "recipeId": "14",
+      "id": 8
     }
   ]
 }
