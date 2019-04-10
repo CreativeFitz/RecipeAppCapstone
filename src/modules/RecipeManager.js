@@ -43,10 +43,9 @@ const recipeAPIManager = {
   }).then(data => data.json());
 },
   recipesPrepped: () => {
-    return fetch(`${remoteURL}/recipes?prepped=true`)
+    return fetch(`${remoteURL}/recipes?prepped=true&_embed=ingredients`)
     .then(recipes => recipes.json());
 }
-
 };
 
 export default recipeAPIManager;

@@ -126,6 +126,14 @@ class ApplicationViews extends Component {
 		);
   };
 
+  recipePrep = () => {
+    return recipeAPIManager.recipesPrepped()
+    .then(meals4week =>
+      this.setState ({
+        meals4Week:meals4week
+      }))
+  }
+
 
 
   componentDidMount() {
@@ -228,6 +236,7 @@ class ApplicationViews extends Component {
             return <Meals4Week
             {...props}
             recipes={this.state.recipes}
+            meals4Week={this.state.meals4Week}
             />;
           } else {
             Auth0Client.signIn();
@@ -242,6 +251,7 @@ class ApplicationViews extends Component {
             {...props}
             recipes={this.state.recipes}
             meals4Week={this.state.meals4Week}
+            ingredients={this.state.ingredients}
             />;
           } else {
             Auth0Client.signIn();
