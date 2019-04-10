@@ -29,40 +29,139 @@
       "id": 12
     },
     {
-      "name": "Spaghetti",
-      "prepped": false,
-      "userId": 3,
-      "id": 13
-    },
-    {
       "name": "Noodles",
       "prepped": true,
       "userId": 2,
       "id": 14
+    },
+    {
+      "name": "Tacos",
+      "prepped": true,
+      "userId": 2,
+      "id": 15
+    },
+    {
+      "name": "Tacos",
+      "prepped": true,
+      "userId": 3,
+      "id": 16
+    },
+    {
+      "name": "Fish Tacos",
+      "prepped": true,
+      "userId": 3,
+      "id": 17
+    },
+    {
+      "name": "Chipotle",
+      "prepped": true,
+      "userId": 3,
+      "id": 18
+    },
+    {
+      "name": "Hibachi",
+      "prepped": true,
+      "userId": 3,
+      "id": 19
     }
   ],
   "directions": [
     {
-      "direction": "Preheat the Bologna to burning",
-      "recipeId": "13",
-      "id": 6
+      "direction": "Fry it",
+      "recipeId": 15,
+      "id": 1
     },
     {
       "direction": "Preheat the Bologna to burning",
-      "recipeId": "14",
-      "id": 7
+      "recipeId": "12",
+      "id": 2
+    },
+    {
+      "direction": "Cook Hamburger meat",
+      "recipeId": "16",
+      "id": 3
+    },
+    {
+      "direction": "Cook Fish",
+      "recipeId": "17",
+      "id": 4
+    },
+    {
+      "direction": "make the bowl",
+      "recipeId": "18",
+      "id": 5
+    },
+    {
+      "direction": "Put on grill",
+      "recipeId": "19",
+      "id": 6
     }
   ],
   "ingredients": [
     {
+      "ingredient": "Burger",
+      "recipeId": 15,
+      "id": 1
+    },
+    {
       "ingredient": "2 slices of Chicken",
-      "recipeId": "13",
-      "id": 7
+      "recipeId": 12,
+      "id": 3
     },
     {
       "ingredient": "Burger",
-      "recipeId": "14",
+      "recipeId": 16,
+      "id": 4
+    },
+    {
+      "ingredient": "Cheese",
+      "recipeId": 16,
+      "id": 5
+    },
+    {
+      "ingredient": "Fish",
+      "recipeId": 17,
+      "id": 6
+    },
+    {
+      "ingredient": "Cheese",
+      "recipeId": 17,
+      "id": 7
+    },
+    {
+      "ingredient": "Shells",
+      "recipeId": 17,
       "id": 8
+    },
+    {
+      "ingredient": "Chicken",
+      "recipeId": 18,
+      "id": 9
+    },
+    {
+      "ingredient": "lettuce",
+      "recipeId": 18,
+      "id": 10
+    },
+    {
+      "ingredient": "cheese",
+      "recipeId": 18,
+      "id": 11
+    },
+    {
+      "ingredient": "chicken",
+      "recipeId": 19,
+      "id": 12
+    },
+    {
+      "ingredient": "rice",
+      "recipeId": 19,
+      "id": 13
+    },
+    {
+      "ingredient": "noodles",
+      "recipeId": 19,
+      "id": 14
     }
   ]
 }

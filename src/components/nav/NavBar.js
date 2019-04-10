@@ -32,6 +32,9 @@ class NavBar extends Component {
                <Link className="nav-link" to="/meals4week">
                Meals for the Week
                </Link>
+               <Link className="nav-link" to="/ingredientsList">
+               Ingredients List
+               </Link>
              </li>
            </ul>
            <div>

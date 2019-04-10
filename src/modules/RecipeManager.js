@@ -42,7 +42,10 @@ const recipeAPIManager = {
     body: JSON.stringify(checkedRecipe)
   }).then(data => data.json());
 },
-
+  recipesPrepped: () => {
+    return fetch(`${remoteURL}/recipes?prepped=true&_embed=ingredients`)
+    .then(recipes => recipes.json());
+}
 };
 
 export default recipeAPIManager;
