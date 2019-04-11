@@ -21,6 +21,7 @@ export default class IngredientsList extends Component {
 
     return (
       <React.Fragment>
+        <h1>Ingredients List</h1>
         <section className="ingredientsList">
         <ul>
         {mealsPrepped.map((ingredients) => {

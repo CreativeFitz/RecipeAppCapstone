@@ -47,7 +47,19 @@ class ApplicationViews extends Component {
         this.setState({
           recipes: recipes
         })
-      );
+      )
+      .then(() =>
+      ingredientAPIManager.getAllIngredients()).then(ingredients =>
+        this.setState({
+          ingredients: ingredients
+        })
+      )
+      .then(() =>
+      directionAPIManager.getAllDirections()
+      ).then(directions =>
+        this.setState({
+          directions: directions
+        }))
   };
 
   addDirection = directionObject =>
@@ -119,18 +131,20 @@ class ApplicationViews extends Component {
   };
 
   recipeChecked = (recipeId, recipeObject) => {
-		return recipeAPIManager.patchRecipeCheck(recipeObject, recipeId).then(() => recipeAPIManager.getAllRecipes()).then((recipes) =>
+    return recipeAPIManager.patchRecipeCheck(recipeObject, recipeId)
+    .then(() => recipeAPIManager.getAllRecipes())
+    .then((recipes) =>
 			this.setState({
-				recipes: recipes
+        recipes: recipes
 			})
 		);
   };
 
   recipePrep = () => {
     return recipeAPIManager.recipesPrepped()
-    .then(meals4week =>
+    .then(meals4Week =>
       this.setState ({
-        meals4Week:meals4week
+        meals4Week: meals4Week
       }))
   }
 
@@ -200,6 +214,7 @@ class ApplicationViews extends Component {
                 updateIngredients={this.updateIngredients}
                 updateDirections={this.updateDirections}
                 recipeChecked={this.recipeChecked}
+                recipePrep={this.recipePrep}
               />;
             } else {
               Auth0Client.signIn();
@@ -237,6 +252,8 @@ class ApplicationViews extends Component {
             {...props}
             recipes={this.state.recipes}
             meals4Week={this.state.meals4Week}
+            recipeChecked={this.recipeChecked}
+            recipePrep={this.recipePrep}
             />;
           } else {
             Auth0Client.signIn();

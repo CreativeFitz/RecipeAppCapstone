@@ -23,145 +23,77 @@
   ],
   "recipes": [
     {
-      "name": "Baked Steak",
+      "name": "Meat Loaf",
       "prepped": true,
       "userId": 3,
-      "id": 12
+      "id": 2
     },
     {
       "name": "Noodles",
       "prepped": true,
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "name": "Meat Loaf",
+      "prepped": true,
       "userId": 2,
-      "id": 14
+      "id": 4
     },
     {
-      "name": "Tacos",
+      "name": "Spaghetti",
       "prepped": true,
       "userId": 2,
-      "id": 15
-    },
-    {
-      "name": "Tacos",
-      "prepped": true,
-      "userId": 3,
-      "id": 16
-    },
-    {
-      "name": "Fish Tacos",
-      "prepped": true,
-      "userId": 3,
-      "id": 17
-    },
-    {
-      "name": "Chipotle",
-      "prepped": true,
-      "userId": 3,
-      "id": 18
-    },
-    {
-      "name": "Hibachi",
-      "prepped": true,
-      "userId": 3,
-      "id": 19
+      "id": 5
     }
   ],
   "directions": [
     {
-      "direction": "Fry it",
-      "recipeId": 15,
-      "id": 1
-    },
-    {
-      "direction": "Preheat the Bologna to burning",
-      "recipeId": "12",
+      "direction": "Grill",
+      "recipeId": 2,
       "id": 2
     },
     {
-      "direction": "Cook Hamburger meat",
-      "recipeId": "16",
+      "direction": "Fry it",
+      "recipeId": 3,
       "id": 3
     },
     {
-      "direction": "Cook Fish",
-      "recipeId": "17",
+      "direction": "Fry it",
+      "recipeId": 4,
       "id": 4
     },
     {
-      "direction": "make the bowl",
-      "recipeId": "18",
+      "direction": "Grill",
+      "recipeId": 5,
       "id": 5
-    },
-    {
-      "direction": "Put on grill",
-      "recipeId": "19",
-      "id": 6
     }
   ],
   "ingredients": [
     {
-      "ingredient": "Burger",
-      "recipeId": 15,
-      "id": 1
+      "ingredient": "2 slices of Chicken",
+      "recipeId": 2,
+      "id": 2
     },
     {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": 12,
+      "ingredient": "Burger",
+      "recipeId": 2,
       "id": 3
     },
     {
-      "ingredient": "Burger",
-      "recipeId": 16,
+      "ingredient": "Noodles",
+      "recipeId": 3,
       "id": 4
     },
     {
-      "ingredient": "Cheese",
-      "recipeId": 16,
+      "ingredient": "2 slices of Chicken",
+      "recipeId": 4,
       "id": 5
     },
     {
-      "ingredient": "Fish",
-      "recipeId": 17,
+      "ingredient": "2 slices of Chicken",
+      "recipeId": 5,
       "id": 6
-    },
-    {
-      "ingredient": "Cheese",
-      "recipeId": 17,
-      "id": 7
-    },
-    {
-      "ingredient": "Shells",
-      "recipeId": 17,
-      "id": 8
-    },
-    {
-      "ingredient": "Chicken",
-      "recipeId": 18,
-      "id": 9
-    },
-    {
-      "ingredient": "lettuce",
-      "recipeId": 18,
-      "id": 10
-    },
-    {
-      "ingredient": "cheese",
-      "recipeId": 18,
-      "id": 11
-    },
-    {
-      "ingredient": "chicken",
-      "recipeId": 19,
-      "id": 12
-    },
-    {
-      "ingredient": "rice",
-      "recipeId": 19,
-      "id": 13
-    },
-    {
-      "ingredient": "noodles",
-      "recipeId": 19,
-      "id": 14
     }
   ]
 }

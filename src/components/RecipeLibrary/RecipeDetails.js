@@ -58,6 +58,10 @@ handleFieldChange = evt => {
     this.setState(stateToChange);
 };
 
+addMeals4Week = (currentRecipeId) => {this.props.recipeChecked({ prepped: true}, parseInt(currentRecipeId))
+.then(this.props.recipePrep)
+.then(() => this.props.history.push("/recipes"))}
+
 render() {
 
   const currentRecipeId = this.props.match.params.recipeId
@@ -85,7 +89,7 @@ render() {
             <h5 className="card-title">Ingredients Needed</h5>
               <ul>
                 {this.props.ingredients.map(singleIngredient =>{
-                  if (singleIngredient.recipeId === currentRecipeId) {
+                  if (singleIngredient.recipeId === parseInt(currentRecipeId)) {
                     return <li className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}
                     </li>
                   }
@@ -100,7 +104,7 @@ render() {
               <h5 className="card-title">Directions</h5>
               <ol>
                 {this.props.directions.map(singleDirection =>{
-                  if (singleDirection.recipeId === currentRecipeId) {
+                  if (singleDirection.recipeId === parseInt(currentRecipeId)) {
                     return <li className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}</li>
                   }
                   else {
@@ -128,7 +132,7 @@ render() {
               }
             >Edit Ingredients or Directions</button>
             <button
-             onClick={() => this.props.recipeChecked({ prepped: true}, parseInt(currentRecipeId))}>Add to This Weeks Meals</button>
+             onClick={() => this.addMeals4Week(currentRecipeId)}>Add to This Weeks Meals</button>
           </div>
         </div>
       </section>
