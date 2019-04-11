@@ -10,7 +10,11 @@ export default class Meals4Week extends Component {
         {this.props.recipes.map(singleRecipe => {
             if  (singleRecipe.userId === parseInt(sessionStorage.getItem(`credentials`))
             && singleRecipe.prepped === true)
-            { return <RecipeCard key={singleRecipe.id} recipe={singleRecipe} />
+            { return <div><RecipeCard key={singleRecipe.id} recipe={singleRecipe} />
+            <button
+            onClick={() => this.props.recipeChecked({ prepped: false}, singleRecipe.id)
+            .then(this.props.recipePrep)
+            }>Remove From This Weeks Meals</button></div>
          }
         else { return null }})}
         </section>

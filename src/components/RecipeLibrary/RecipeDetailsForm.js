@@ -29,7 +29,7 @@ export default class RecipeDetailsForm extends Component {
         else {
             const ingredient = {
                 ingredient: this.state.ingredients,
-                recipeId: this.props.match.params.recipeId
+                recipeId: parseInt(this.props.match.params.recipeId)
             };
             this.props.addIngredient(ingredient)
                 .then(this.setState({ ingredients: "" }))
@@ -40,11 +40,10 @@ export default class RecipeDetailsForm extends Component {
     constructNewDirection = evt => {
         evt.preventDefault();
         if (this.state.directions === "") { window.alert("Please enter your directions"); }
-
         else {
             const direction = {
                 direction: this.state.directions,
-                recipeId: this.props.match.params.recipeId
+                recipeId: parseInt(this.props.match.params.recipeId)
             };
             this.props.addDirection(direction)
                 .then(this.setState({ directions: "" }))
@@ -111,7 +110,7 @@ export default class RecipeDetailsForm extends Component {
                         <label htmlFor="ingredient">Ingredients</label>
                         <ul className="IngredientList">
                             {this.props.ingredients.map(singleIngredient => {
-                                if (singleIngredient.recipeId === this.props.match.params.recipeId) {
+                                if (singleIngredient.recipeId === parseInt(this.props.match.params.recipeId)) {
                                     if (singleIngredient.id === this.state.IngredientToEdit.id) {
                                         return <div key={this.state.IngredientToEdit.id}><input
                                             type="text"
@@ -129,6 +128,7 @@ export default class RecipeDetailsForm extends Component {
                                                 className="btn btn-primary"
                                             >Submit New Edit</button></div>
                                     } else {
+                                        console.log("hello")
                                         return <p className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}
                                             <button
                                                 type="submit"
@@ -172,7 +172,7 @@ export default class RecipeDetailsForm extends Component {
                         <label htmlFor="direction">Directions</label>
                         <ul className="DirectionsList">
                             {this.props.directions.map(singleDirection => {
-                                if (singleDirection.recipeId === this.props.match.params.recipeId) {
+                                if (singleDirection.recipeId === parseInt(this.props.match.params.recipeId)) {
                                     if (singleDirection.id === this.state.DirectionToEdit.id) {
                                         return <div key={this.state.DirectionToEdit.id}><input
                                             type="text"
