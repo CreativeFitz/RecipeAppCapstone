@@ -39,6 +39,7 @@ class Callback extends Component {
                 parsedUser
               );
               sessionStorage.setItem("credentials", parsedUser.id);
+              this.props.history.replace("/");
             });
         } else {
           // If something DOES come back from the fetch call (i.e. the array has a user in it), that means the user already exists in our db and we just need to log them in
