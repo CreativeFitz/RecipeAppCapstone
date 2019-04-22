@@ -23,13 +23,6 @@
   ],
   "recipes": [
     {
-      "name": "Meat Loaf",
-      "image": "https://images-gmi-pmc.edge-generalmills.com/3e0ded09-f8a2-45b6-aff7-e08ab138ed84.jpg",
-      "prepped": false,
-      "userId": 3,
-      "id": 1
-    },
-    {
       "name": "Chicken and dumplings",
       "image": "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18132536/Schroeder-chicken-dumplings-main.jpg",
       "prepped": false,
@@ -46,11 +39,6 @@
   ],
   "directions": [
     {
-      "direction": "Fry it",
-      "recipeId": 1,
-      "id": 1
-    },
-    {
       "direction": "Hot Pot",
       "recipeId": 2,
       "id": 2
@@ -62,11 +50,6 @@
     }
   ],
   "ingredients": [
-    {
-      "ingredient": "Burger",
-      "recipeId": 1,
-      "id": 1
-    },
     {
       "ingredient": "2 slices of Chicken",
       "recipeId": 2,

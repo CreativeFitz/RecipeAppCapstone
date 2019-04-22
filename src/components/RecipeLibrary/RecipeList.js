@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import RecipeCard from "./RecipeCard";
-import "./RecipeStyle.css"
+
 
 export default class RecipeList extends Component {
   render() {

@@ -43,7 +43,7 @@ class NavBar extends Component {
              </li>
            </ul>
            <div>
-             <label className="mr-2 text-blue">
+             <label className="userName">
                {auth0Client.getProfile().name}
              </label>
              <button
