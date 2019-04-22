@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import auth0Client from "../authentication/Auth";
+import "./NavBar.css"
 
 // Check how it renders and update with new CSS Library
 
@@ -15,7 +16,8 @@ class NavBar extends Component {
 
  render() {
    return (
-     <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
+    //  <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
+      <nav className="navbar navbar-default navbar-custom">
        {!auth0Client.isAuthenticated() ? (
         //  <button className="btn btn-success" onClick={auth0Client.signIn}>
         //    Sign In
@@ -28,10 +30,13 @@ class NavBar extends Component {
              <li className="nav-item">
                <Link className="nav-link" to="/recipes">
                  Recipe Library
-               </Link>
+               </Link></li>
+               <li>
                <Link className="nav-link" to="/meals4week">
                Meals for the Week
                </Link>
+               </li>
+               <li>
                <Link className="nav-link" to="/ingredientsList">
                Ingredients List
                </Link>

@@ -1,0 +1,23 @@
+.navbar-custom {
+    background-color: rgba(110, 138, 150, .5);
+    border-color: #E7E7E7;
+
+}
+
+a {
+    color: white;
+
+}
+
+a:hover, a:active {
+    background-color: #8C8C87;
+ }
+
+ .nav-link {
+    color:red;
+    padding: 10px, 10px;
+
+}
+
+
+

@@ -10,6 +10,7 @@ export default class RecipeNameForm extends Component {
   // Set initial state
   state = {
     userId: "",
+    image: "",
     recipeName: ""
   };
 
@@ -30,6 +31,7 @@ export default class RecipeNameForm extends Component {
     } else {
       const recipe = {
         name: this.state.recipeName,
+        image: this.state.recipeImage,
         prepped: false,
         userId: parseInt(sessionStorage.getItem(`credentials`))
        };
@@ -57,6 +59,14 @@ export default class RecipeNameForm extends Component {
               id="recipeName"
               placeholder="Recipe name"
             />
+            <input
+            type ="text"
+            required
+            className="form-control"
+            onChange={this.handleFieldChange}
+            id="recipeImage"
+            placeholder="Enter your image URL"/>
+
              {/* Placed this inside the input div, may need to move outside the div */}
              <button
             type="submit"
