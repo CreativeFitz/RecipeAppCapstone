@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script"');
+
+
+.welcome-text {
+    color: white;
+    font-size: 2.25rem
+}
+
+.bonApp {
+    font-family: 'Bad Script', cursive;
+    color: white;
+    font-size: 3.5rem
+}
+
+.introParent {
+    text-align: center;
+}
+
+.intro {
+    display: inline-block;
+}

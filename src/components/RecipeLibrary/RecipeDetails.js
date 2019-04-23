@@ -80,7 +80,7 @@ render() {
 
 
       return (
-      <section className="recipe">
+      <div className="recipe">
         <div key={recipe.id} className="card">
           <div className="card-body">
             <h2 className="card-title">
@@ -116,7 +116,7 @@ render() {
 
             <button
               href="#"
-              className="btn btn-danger"
+              className="btn"
               onClick={() =>
                 this.props
                   .deleteRecipe(recipe.id)
@@ -127,15 +127,15 @@ render() {
             </button>
             <button
               href="#"
-              className="btn btn-danger"
+              className="btn"
               onClick={() => this.props.history.push(`/recipes/${currentRecipeId}/details`)
               }
             >Edit Ingredients or Directions</button>
-            <button
+            <button className="btn"
              onClick={() => this.addMeals4Week(currentRecipeId)}>Add to This Weeks Meals</button>
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 }

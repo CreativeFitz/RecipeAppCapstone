@@ -1,0 +1,19 @@
+.listContainer {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    min-height: 300px;
+    min-width: 275px;
+    border-radius: 10px;
+    -webkit-box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
+    box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
+}
+
+.listParentContainer {
+    text-align: center;
+}
+
+.listTitle {
+    margin-top: 10px
+}
+

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./IngredientsList.css"
 
 export default class IngredientsList extends Component {
   render() {
@@ -21,7 +22,9 @@ export default class IngredientsList extends Component {
 
     return (
       <React.Fragment>
-        <h1>Ingredients List</h1>
+        <div className="listParentContainer">
+        <div className="listContainer">
+        <h1 className="listTitle">Grocery List</h1>
         <section className="ingredientsList">
         <ul>
         {mealsPrepped.map((ingredients) => {
@@ -30,6 +33,8 @@ export default class IngredientsList extends Component {
         </ul>
 
         </section>
+        </div>
+        </div>
       </React.Fragment>
     );
   }

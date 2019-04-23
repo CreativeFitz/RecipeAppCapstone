@@ -50,7 +50,7 @@ export default class RecipeNameForm extends Component {
         {/* INPUT FIELD FOR RECIPE NAME */}
         <form className="recipeNameForm">
           <div className="form-group">
-            <label htmlFor="recipeName">Recipe name</label>
+            <h4 htmlFor="recipeName">Recipe name</h4>
             <input
               type="text"
               required
@@ -72,7 +72,7 @@ export default class RecipeNameForm extends Component {
             type="submit"
             onClick={this.constructNewRecipe}
 
-            className="btn btn-primary"
+            className="btn "
           >Submit Recipe Name</button>
           </div>
 

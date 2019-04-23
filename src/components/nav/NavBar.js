@@ -47,7 +47,7 @@ class NavBar extends Component {
                {auth0Client.getProfile().name}
              </label>
              <button
-               className="btn btn-danger"
+               className="btn"
                onClick={() => {
                  this.signOut();
                }}

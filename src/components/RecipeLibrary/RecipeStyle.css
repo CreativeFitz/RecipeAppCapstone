@@ -10,8 +10,7 @@ body {
 .card {
     color: #6E8A96;
     width: 15rem;
-    margin: 20px;
-    justify-content: space-evenly;
+    margin: 19px;
     opacity: 1.0
 }
 
@@ -24,7 +23,8 @@ box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
 .recipes{
     display: flex;
      flex-wrap: wrap;
-     opacity: 1.0
+     opacity: 1.0;
+     justify-content: space-evenly;
 
 }
 
@@ -32,5 +32,73 @@ box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
     color: red;
     padding: 0px
 }
+
+.nav-link-steps:hover, .nav-link-steps:active {
+    color: rgba(30, 22, 54)
+}
+
+button {
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    margin: 2px auto;
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 20px 30px;
+}
+
+button.btn {
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset
+}
+
+button.btn:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset
+}
+
+button.btn-red {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(255, 0, 0, 0.7) 0 0px 0px 40px inset;
+}
+
+
+button.btn-red:hover {
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(255, 255, 255, 0.6) 0 0px 0px 2px inset;
+}
+
+.recipeButton {
+    text-align: center
+}
+
+.btn-newRecipe {
+    display: inline-block;
+}
+
+li {
+    text-align: left;
+}
+
+.form-group, .form-group-details, .card-body {
+    background: white;
+    min-height: 12rem;
+    max-width: 20rem;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.card {
+    display: inline-block
+}
+
+.recipeNameForm,.recipeDetailsForm, .card, .recipe {
+    text-align: center
+}
+
 
 

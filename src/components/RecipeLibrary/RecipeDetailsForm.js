@@ -105,7 +105,7 @@ export default class RecipeDetailsForm extends Component {
         return (
             <React.Fragment>{/* INPUT FIELD FOR INGREDIENT */}
                 <form className="recipeDetailsForm">
-                    <div className="form-group">
+                    <div className="form-group-details">
                         <h1>{this.state.recipe}</h1>
                         <label htmlFor="ingredient">Ingredients</label>
                         <ul className="IngredientList">
@@ -133,10 +133,10 @@ export default class RecipeDetailsForm extends Component {
                                             <button
                                                 type="submit"
                                                 onClick={() => this.generateIngredientForm(singleIngredient)}
-                                                className="btn btn-primary">
+                                                className="btn">
                                                 Edit</button><button
                                                     href="#"
-                                                    className="btn btn-danger"
+                                                    className="btn"
                                                     onClick={(evt) =>{evt.preventDefault()
                                                         this.props
                                                             .deleteIngredient(singleIngredient.id)
@@ -164,12 +164,10 @@ export default class RecipeDetailsForm extends Component {
                         <button
                             type="submit"
                             onClick={this.constructNewIngredient}
-                            className="btn btn-primary"
+                            className="btn"
                         >Next Ingredient</button>
-                    </div>
                     {/* Input field and button for directions */}
-                    <div className="form-group">
-                        <label htmlFor="direction">Directions</label>
+                        <div htmlFor="direction">Directions</div>
                         <ul className="DirectionsList">
                             {this.props.directions.map(singleDirection => {
                                 if (singleDirection.recipeId === parseInt(this.props.match.params.recipeId)) {
@@ -187,16 +185,16 @@ export default class RecipeDetailsForm extends Component {
                                             <button
                                                 type="submit"
                                                 onClick={this.editDirection}
-                                                className="btn btn-primary"
+                                                className="btn"
                                             >Submit New Edit</button></div>
                                     } else {
                                         return <li className={singleDirection.id} key={singleDirection.id}>{singleDirection.direction}<button
                                             type="submit"
                                             onClick={() => this.generateDirectionForm(singleDirection)}
-                                            className="btn btn-primary">
+                                            className="btn">
                                             Edit</button><button
                                                     href="#"
-                                                    className="btn btn-danger"
+                                                    className="btn"
                                                     onClick={(evt) =>{evt.preventDefault()
                                                         this.props
                                                             .deleteDirection(singleDirection.id)
@@ -224,7 +222,7 @@ export default class RecipeDetailsForm extends Component {
                         <button
                             type="submit"
                             onClick={this.constructNewDirection}
-                            className="btn btn-primary">
+                            className="btn">
                             Next Direction</button>
                         <div className="returnButton">
                             <button
@@ -234,11 +232,11 @@ export default class RecipeDetailsForm extends Component {
                                         .deleteRecipe(this.props.match.params.recipeId)
                                         .then(() => this.props.history.push("/recipes"))
                                 }
-                                className="btn btn-primary">Cancel Recipe</button>
+                                className="btn">Cancel Recipe</button>
                             <button
                                 type="submit"
                                 onClick={this.refresh}
-                                className="btn btn-primary"
+                                className="btn"
                             >Submit Recipe</button>
                         </div>
                     </div>
