@@ -25,28 +25,35 @@
     {
       "name": "Tacos",
       "image": " https://www.centercutcook.com/wp-content/uploads/2014/04/slow-cooker-beef-tacos-3.jpg",
-      "prepped": true,
+      "prepped": false,
       "userId": 3,
       "id": 1
     },
     {
       "name": "Spaghetti",
       "image": " https://www.cookitalia.co.uk/wp-content/uploads/2015/06/MeatballsLowRes-600x500.jpg",
-      "prepped": true,
+      "prepped": false,
       "userId": 3,
       "id": 2
     },
     {
       "name": "Pizza",
       "image": " https://www.shefinds.com/files/2017/12/healthy-pizza-recipes-3.jpg",
-      "prepped": true,
+      "prepped": false,
       "userId": 3,
       "id": 3
+    },
+    {
+      "name": "Meat Loaf",
+      "image": " https://www.newsmax.com/Newsmax/files/57/57624f0a-631e-4ca7-9be4-8d9651d39287.jpg",
+      "prepped": true,
+      "userId": 3,
+      "id": 4
     }
   ],
   "directions": [
     {
-      "direction": "Fry burger until brow",
+      "direction": "Fry burger until brown",
       "recipeId": 1,
       "id": 7
     },
@@ -74,6 +81,16 @@
       "direction": "Put it all together and bake it",
       "recipeId": 3,
       "id": 12
+    },
+    {
+      "direction": "Shred it",
+      "recipeId": 4,
+      "id": 13
+    },
+    {
+      "direction": "Do anything for love",
+      "recipeId": 4,
+      "id": 14
     }
   ],
   "ingredients": [
@@ -126,6 +143,16 @@
       "ingredient": "1 jar of pizza sauce",
       "recipeId": 3,
       "id": 17
+    },
+    {
+      "ingredient": "1 electric guitar",
+      "recipeId": 4,
+      "id": 18
+    },
+    {
+      "ingredient": "1 bottle of whiskey",
+      "recipeId": 4,
+      "id": 19
     }
   ]
 }
