@@ -1,0 +1,36 @@
+body {
+    background: url(./Background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+
+  }
+.card {
+    color: #6E8A96;
+    width: 15rem;
+    margin: 20px;
+    justify-content: space-evenly;
+    opacity: 1.0
+}
+
+.card-shadow {
+    -webkit-box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
+-moz-box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
+box-shadow: 15px 34px 5px 0px rgba(0,0,0,0.67);
+}
+
+.recipes{
+    display: flex;
+     flex-wrap: wrap;
+     opacity: 1.0
+
+}
+
+.nav-link-steps {
+    color: red;
+    padding: 0px
+}
+
+

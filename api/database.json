@@ -23,50 +23,30 @@
   ],
   "recipes": [
     {
-      "name": "Meat Loaf",
-      "prepped": true,
+      "name": "Chicken and dumplings",
+      "image": "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18132536/Schroeder-chicken-dumplings-main.jpg",
+      "prepped": false,
       "userId": 3,
       "id": 2
     },
     {
-      "name": "Noodles",
-      "prepped": true,
+      "name": "Spaghetti",
+      "image": "https://cmt.azureedge.net/media/orig_beef-ragu-over-spaghetti-squash-with-gar-20180531232653730505magxt.jpg",
+      "prepped": false,
       "userId": 3,
       "id": 3
-    },
-    {
-      "name": "Meat Loaf",
-      "prepped": true,
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "name": "Spaghetti",
-      "prepped": true,
-      "userId": 2,
-      "id": 5
     }
   ],
   "directions": [
     {
-      "direction": "Grill",
+      "direction": "Hot Pot",
       "recipeId": 2,
       "id": 2
     },
     {
-      "direction": "Fry it",
+      "direction": "Boil Noodles",
       "recipeId": 3,
       "id": 3
-    },
-    {
-      "direction": "Fry it",
-      "recipeId": 4,
-      "id": 4
-    },
-    {
-      "direction": "Grill",
-      "recipeId": 5,
-      "id": 5
     }
   ],
   "ingredients": [
@@ -77,23 +57,8 @@
     },
     {
       "ingredient": "Burger",
-      "recipeId": 2,
-      "id": 3
-    },
-    {
-      "ingredient": "Noodles",
       "recipeId": 3,
-      "id": 4
-    },
-    {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": 4,
-      "id": 5
-    },
-    {
-      "ingredient": "2 slices of Chicken",
-      "recipeId": 5,
-      "id": 6
+      "id": 3
     }
   ]
 }
