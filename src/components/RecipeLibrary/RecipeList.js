@@ -9,7 +9,7 @@ export default class RecipeList extends Component {
         <div className="recipeButton">
           <button
             type="button"
-            className="btn btn-success"
+            className="btn btn-newRecipe"
             onClick={() => {
               this.props.history.push("/recipes/new");
             }}

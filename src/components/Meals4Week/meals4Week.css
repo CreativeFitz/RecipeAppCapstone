@@ -1,0 +1,11 @@
+.meals4Week {
+    color: red;
+}
+
+.recipesContainerParent {
+    text-align: center;
+}
+
+.recipesContainer {
+    display: inline-block;
+}

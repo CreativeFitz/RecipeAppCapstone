@@ -35,6 +35,20 @@
       "prepped": true,
       "userId": 3,
       "id": 3
+    },
+    {
+      "name": "Tacos",
+      "image": "https://www.newsmax.com/Newsmax/files/24/249a1bac-1b65-464a-81e1-9699b0cf6f45.jpg",
+      "prepped": false,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "name": "Sirloin Steak",
+      "image": "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18201222/fc50cu032-02-main.jpg",
+      "prepped": false,
+      "userId": 3,
+      "id": 5
     }
   ],
   "directions": [
@@ -47,6 +61,16 @@
       "direction": "Boil Noodles",
       "recipeId": 3,
       "id": 3
+    },
+    {
+      "direction": "Grill",
+      "recipeId": 4,
+      "id": 4
+    },
+    {
+      "direction": "Grill it",
+      "recipeId": 5,
+      "id": 5
     }
   ],
   "ingredients": [
@@ -59,6 +83,16 @@
       "ingredient": "Burger",
       "recipeId": 3,
       "id": 3
+    },
+    {
+      "ingredient": "Burger",
+      "recipeId": 4,
+      "id": 4
+    },
+    {
+      "ingredient": "2 Sirloin Steaks",
+      "recipeId": 5,
+      "id": 5
     }
   ]
 }
