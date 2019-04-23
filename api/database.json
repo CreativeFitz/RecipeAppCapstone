@@ -25,14 +25,14 @@
     {
       "name": "Chicken and dumplings",
       "image": "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18132536/Schroeder-chicken-dumplings-main.jpg",
-      "prepped": false,
+      "prepped": true,
       "userId": 3,
       "id": 2
     },
     {
       "name": "Spaghetti",
       "image": "https://cmt.azureedge.net/media/orig_beef-ragu-over-spaghetti-squash-with-gar-20180531232653730505magxt.jpg",
-      "prepped": false,
+      "prepped": true,
       "userId": 3,
       "id": 3
     }
