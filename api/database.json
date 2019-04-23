@@ -23,76 +23,109 @@
   ],
   "recipes": [
     {
-      "name": "Chicken and dumplings",
-      "image": "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18132536/Schroeder-chicken-dumplings-main.jpg",
+      "name": "Tacos",
+      "image": " https://www.centercutcook.com/wp-content/uploads/2014/04/slow-cooker-beef-tacos-3.jpg",
+      "prepped": true,
+      "userId": 3,
+      "id": 1
+    },
+    {
+      "name": "Spaghetti",
+      "image": " https://www.cookitalia.co.uk/wp-content/uploads/2015/06/MeatballsLowRes-600x500.jpg",
       "prepped": true,
       "userId": 3,
       "id": 2
     },
     {
-      "name": "Spaghetti",
-      "image": "https://cmt.azureedge.net/media/orig_beef-ragu-over-spaghetti-squash-with-gar-20180531232653730505magxt.jpg",
+      "name": "Pizza",
+      "image": " https://www.shefinds.com/files/2017/12/healthy-pizza-recipes-3.jpg",
       "prepped": true,
       "userId": 3,
       "id": 3
-    },
-    {
-      "name": "Tacos",
-      "image": "https://www.newsmax.com/Newsmax/files/24/249a1bac-1b65-464a-81e1-9699b0cf6f45.jpg",
-      "prepped": false,
-      "userId": 3,
-      "id": 4
-    },
-    {
-      "name": "Sirloin Steak",
-      "image": "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18201222/fc50cu032-02-main.jpg",
-      "prepped": false,
-      "userId": 3,
-      "id": 5
     }
   ],
   "directions": [
     {
-      "direction": "Hot Pot",
+      "direction": "Fry burger until brow",
+      "recipeId": 1,
+      "id": 7
+    },
+    {
+      "direction": "Mix in homemade seasoning with burger",
+      "recipeId": 1,
+      "id": 8
+    },
+    {
+      "direction": "Serve",
+      "recipeId": 1,
+      "id": 9
+    },
+    {
+      "direction": "Heat water to boiling",
       "recipeId": 2,
-      "id": 2
+      "id": 10
     },
     {
-      "direction": "Boil Noodles",
+      "direction": "Cook noodles",
+      "recipeId": 2,
+      "id": 11
+    },
+    {
+      "direction": "Put it all together and bake it",
       "recipeId": 3,
-      "id": 3
-    },
-    {
-      "direction": "Grill",
-      "recipeId": 4,
-      "id": 4
-    },
-    {
-      "direction": "Grill it",
-      "recipeId": 5,
-      "id": 5
+      "id": 12
     }
   ],
   "ingredients": [
     {
-      "ingredient": "2 slices of Chicken",
+      "ingredient": "2 lbs of hamburger",
+      "recipeId": 1,
+      "id": 8
+    },
+    {
+      "ingredient": "1 cup of cheese",
+      "recipeId": 1,
+      "id": 9
+    },
+    {
+      "ingredient": "1 box of hard shells",
+      "recipeId": 1,
+      "id": 10
+    },
+    {
+      "ingredient": "1 cup of sour cream",
+      "recipeId": 1,
+      "id": 11
+    },
+    {
+      "ingredient": "1 cup of noodles",
       "recipeId": 2,
-      "id": 2
+      "id": 12
     },
     {
-      "ingredient": "Burger",
+      "ingredient": "1 jar of marinara",
+      "recipeId": 2,
+      "id": 13
+    },
+    {
+      "ingredient": "2 cups of cheese",
       "recipeId": 3,
-      "id": 3
+      "id": 14
     },
     {
-      "ingredient": "Burger",
-      "recipeId": 4,
-      "id": 4
+      "ingredient": "1 cup of flour",
+      "recipeId": 3,
+      "id": 15
     },
     {
-      "ingredient": "2 Sirloin Steaks",
-      "recipeId": 5,
-      "id": 5
+      "ingredient": "1 pkg of pepperonis",
+      "recipeId": 3,
+      "id": 16
+    },
+    {
+      "ingredient": "1 jar of pizza sauce",
+      "recipeId": 3,
+      "id": 17
     }
   ]
 }
