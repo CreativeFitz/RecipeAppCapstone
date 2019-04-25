@@ -9,7 +9,7 @@ export default class IngredientsList extends Component {
    .map((recipe) => {
        return recipe.ingredients
    })
-   .flat()
+   .reduce((acc, value) => acc.concat(value), []);
 
 
 
