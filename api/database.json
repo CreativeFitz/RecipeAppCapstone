@@ -25,21 +25,21 @@
     {
       "name": "Tacos",
       "image": " https://www.centercutcook.com/wp-content/uploads/2014/04/slow-cooker-beef-tacos-3.jpg",
-      "prepped": false,
+      "prepped": true,
       "userId": 3,
       "id": 1
     },
     {
       "name": "Spaghetti",
       "image": " https://www.cookitalia.co.uk/wp-content/uploads/2015/06/MeatballsLowRes-600x500.jpg",
-      "prepped": false,
+      "prepped": true,
       "userId": 3,
       "id": 2
     },
     {
       "name": "Pizza",
       "image": " https://www.shefinds.com/files/2017/12/healthy-pizza-recipes-3.jpg",
-      "prepped": false,
+      "prepped": true,
       "userId": 3,
       "id": 3
     },
@@ -49,6 +49,13 @@
       "prepped": true,
       "userId": 3,
       "id": 4
+    },
+    {
+      "name": "Tacos",
+      "image": "https://images-gmi-pmc.edge-generalmills.com/3e0ded09-f8a2-45b6-aff7-e08ab138ed84.jpg",
+      "prepped": true,
+      "userId": 3,
+      "id": 5
     }
   ],
   "directions": [
@@ -91,6 +98,11 @@
       "direction": "Do anything for love",
       "recipeId": 4,
       "id": 14
+    },
+    {
+      "direction": "grill",
+      "recipeId": 5,
+      "id": 15
     }
   ],
   "ingredients": [
@@ -153,6 +165,11 @@
       "ingredient": "1 bottle of whiskey",
       "recipeId": 4,
       "id": 19
+    },
+    {
+      "ingredient": "2 slices of Chicken",
+      "recipeId": 5,
+      "id": 20
     }
   ]
 }
