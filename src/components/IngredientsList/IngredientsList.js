@@ -3,7 +3,7 @@ import "./IngredientsList.css"
 
 export default class IngredientsList extends Component {
   render() {
-    console.log(this.props.meals4Week, "hello")
+
 
 // Using "mealsPrepped" to break down nested arrays so that the ingredients can be mapped over.
 
@@ -15,7 +15,6 @@ export default class IngredientsList extends Component {
 
 
 
-   console.log(mealsPrepped)
 
 
 
