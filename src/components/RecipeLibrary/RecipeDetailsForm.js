@@ -129,7 +129,6 @@ export default class RecipeDetailsForm extends Component {
                                                 className="btn btn-primary"
                                             >Submit New Edit</button></div>
                                     } else {
-                                        console.log("hello")
                                         return <p className={singleIngredient.id} key={singleIngredient.id}>{singleIngredient.ingredient}
                                             <button
                                                 type="submit"

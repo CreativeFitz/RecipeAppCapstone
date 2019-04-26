@@ -23,13 +23,6 @@
   ],
   "recipes": [
     {
-      "name": "Tacos",
-      "image": " https://www.centercutcook.com/wp-content/uploads/2014/04/slow-cooker-beef-tacos-3.jpg",
-      "prepped": false,
-      "userId": 3,
-      "id": 1
-    },
-    {
       "name": "Pizza",
       "image": " https://www.shefinds.com/files/2017/12/healthy-pizza-recipes-3.jpg",
       "prepped": false,
@@ -53,22 +46,7 @@
   ],
   "directions": [
     {
-      "direction": "Fry burger until brown",
-      "recipeId": 1,
-      "id": 7
-    },
-    {
-      "direction": "Mix in homemade seasoning with burger",
-      "recipeId": 1,
-      "id": 8
-    },
-    {
-      "direction": "Serve",
-      "recipeId": 1,
-      "id": 9
-    },
-    {
-      "direction": "Put it all together and bake it",
+      "direction": "Bake it",
       "recipeId": 3,
       "id": 12
     },
@@ -86,31 +64,16 @@
       "direction": "grill",
       "recipeId": 5,
       "id": 15
+    },
+    {
+      "direction": "Bake it more",
+      "recipeId": 3,
+      "id": 16
     }
   ],
   "ingredients": [
     {
-      "ingredient": "2 lbs of hamburger",
-      "recipeId": 1,
-      "id": 8
-    },
-    {
-      "ingredient": "1 cup of cheese",
-      "recipeId": 1,
-      "id": 9
-    },
-    {
-      "ingredient": "1 box of hard shells",
-      "recipeId": 1,
-      "id": 10
-    },
-    {
-      "ingredient": "1 cup of sour cream",
-      "recipeId": 1,
-      "id": 11
-    },
-    {
-      "ingredient": "2 cups of cheese",
+      "ingredient": "3 cups of cheese",
       "recipeId": 3,
       "id": 14
     },
@@ -143,6 +106,11 @@
       "ingredient": "2 slices of Chicken",
       "recipeId": 5,
       "id": 20
+    },
+    {
+      "ingredient": "1 cup of banana peppers",
+      "recipeId": 3,
+      "id": 21
     }
   ]
 }

@@ -12,7 +12,7 @@ class BonApp extends Component {
           await Auth0Client.silentAuth();
           this.forceUpdate();
         } catch (err) {
-          if (err.error !== 'login_required') console.log(err.error);
+          if (err.error !== 'login_required');
         }
       }
     render() {
