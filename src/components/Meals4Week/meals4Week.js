@@ -9,6 +9,8 @@ export default class Meals4Week extends Component {
             <div className="recipesContainer">
                 <h1 className="meals4Week">Meals For the Week</h1>
                 <section className="recipes">
+
+        {/* Mapping over recipes and checking for recipes with a key of "prepped" that has a value of "true". If they do then it is printing the recipes that do to the page using the card component */}
         {this.props.recipes.map(singleRecipe => {
             if  (singleRecipe.userId === parseInt(sessionStorage.getItem(`credentials`))
             && singleRecipe.prepped === true)

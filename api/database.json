@@ -25,35 +25,28 @@
     {
       "name": "Tacos",
       "image": " https://www.centercutcook.com/wp-content/uploads/2014/04/slow-cooker-beef-tacos-3.jpg",
-      "prepped": true,
+      "prepped": false,
       "userId": 3,
       "id": 1
     },
     {
-      "name": "Spaghetti",
-      "image": " https://www.cookitalia.co.uk/wp-content/uploads/2015/06/MeatballsLowRes-600x500.jpg",
-      "prepped": true,
-      "userId": 3,
-      "id": 2
-    },
-    {
       "name": "Pizza",
       "image": " https://www.shefinds.com/files/2017/12/healthy-pizza-recipes-3.jpg",
-      "prepped": true,
+      "prepped": false,
       "userId": 3,
       "id": 3
     },
     {
       "name": "Meat Loaf",
       "image": " https://www.newsmax.com/Newsmax/files/57/57624f0a-631e-4ca7-9be4-8d9651d39287.jpg",
-      "prepped": true,
+      "prepped": false,
       "userId": 3,
       "id": 4
     },
     {
       "name": "Tacos",
       "image": "https://images-gmi-pmc.edge-generalmills.com/3e0ded09-f8a2-45b6-aff7-e08ab138ed84.jpg",
-      "prepped": true,
+      "prepped": false,
       "userId": 3,
       "id": 5
     }
@@ -73,16 +66,6 @@
       "direction": "Serve",
       "recipeId": 1,
       "id": 9
-    },
-    {
-      "direction": "Heat water to boiling",
-      "recipeId": 2,
-      "id": 10
-    },
-    {
-      "direction": "Cook noodles",
-      "recipeId": 2,
-      "id": 11
     },
     {
       "direction": "Put it all together and bake it",
@@ -125,16 +108,6 @@
       "ingredient": "1 cup of sour cream",
       "recipeId": 1,
       "id": 11
-    },
-    {
-      "ingredient": "1 cup of noodles",
-      "recipeId": 2,
-      "id": 12
-    },
-    {
-      "ingredient": "1 jar of marinara",
-      "recipeId": 2,
-      "id": 13
     },
     {
       "ingredient": "2 cups of cheese",

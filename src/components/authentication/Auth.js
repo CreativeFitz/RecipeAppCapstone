@@ -3,6 +3,7 @@ import AuthConfig from './AuthConfig';
 
 class Auth {
   constructor() {
+    // Auth0 functionality for app to check in Auth0 database and compare it to user entered values. Then retrieving user profile if values match Auth0 database.
     this.auth0 = new auth0.WebAuth({
       domain: AuthConfig.domain,
       audience: `https://${AuthConfig.domain}/userinfo`,
