@@ -9,7 +9,7 @@ export default class RecipeCard extends Component {
 
         <div className="card card-shadow">
   <img src={this.props.recipe.image} className="card-img-top"
-  alt="https://www.ramw.org/sites/default/files/styles/content/public/default_images/default_0.jpg?itok=TlxjusRt"
+  alt="recipePicture"
   />
   <div className="card-body">
     <h5 className="card-title">{this.props.recipe.name}</h5>
@@ -18,7 +18,6 @@ export default class RecipeCard extends Component {
               Ingredients and Steps
             </Link>
             </p>
-    {/* <a href={`/recipes/${this.props.recipe.id}`} className="btn btn-primary">Go somewhere</a> */}
   </div>
 </div>
     );

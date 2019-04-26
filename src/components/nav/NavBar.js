@@ -16,12 +16,8 @@ class NavBar extends Component {
 
  render() {
    return (
-    //  <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
       <nav className="navbar navbar-default navbar-custom">
        {!auth0Client.isAuthenticated() ? (
-        //  <button className="btn btn-success" onClick={auth0Client.signIn}>
-        //    Sign In
-        //  </button>
         null
        ) : (
          <React.Fragment>

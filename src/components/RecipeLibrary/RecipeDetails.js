@@ -67,11 +67,7 @@ render() {
   const currentRecipeId = this.props.match.params.recipeId
 
 
-    /*
-            Using the route parameter, find the recipe that the
-            user clicked on by looking at the `this.props.recipes`
-            collection that was passed down from ApplicationViews
-        */
+
     const recipe =
       this.props.recipes.find(
         a => a.id === parseInt(currentRecipeId)
@@ -86,6 +82,8 @@ render() {
             <h2 className="card-title">
               {recipe.name}
             </h2>
+
+{/* /////////////////////////Ingredients List///////////////////////// */}
             <h5 className="card-title">Ingredients Needed</h5>
               <ul>
                 {this.props.ingredients.map(singleIngredient =>{

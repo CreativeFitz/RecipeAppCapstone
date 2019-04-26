@@ -47,7 +47,7 @@ export default class RecipeNameForm extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* INPUT FIELD FOR RECIPE NAME */}
+        {/* Input field for recipe name and a recipe image */}
         <form className="recipeNameForm">
           <div className="form-group">
             <h4 htmlFor="recipeName">Recipe name</h4>
@@ -66,8 +66,6 @@ export default class RecipeNameForm extends Component {
             onChange={this.handleFieldChange}
             id="recipeImage"
             placeholder="Enter your image URL"/>
-
-             {/* Placed this inside the input div, may need to move outside the div */}
              <button
             type="submit"
             onClick={this.constructNewRecipe}

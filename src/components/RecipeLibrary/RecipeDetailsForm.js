@@ -109,6 +109,7 @@ export default class RecipeDetailsForm extends Component {
                         <h1>{this.state.recipe}</h1>
                         <label htmlFor="ingredient">Ingredients</label>
                         <ul className="IngredientList">
+        {/* Mapping over ingredients to find those that have an "recipeId" foreign key thats value matches the current recipes Id. If it does it will print to a list above input. Also checking when a user hits the edit button if the ingredients id matches the ingredients id that is currently in "IngredientToEdit state." */}
                             {this.props.ingredients.map(singleIngredient => {
                                 if (singleIngredient.recipeId === parseInt(this.props.match.params.recipeId)) {
                                     if (singleIngredient.id === this.state.IngredientToEdit.id) {
@@ -169,6 +170,7 @@ export default class RecipeDetailsForm extends Component {
                     {/* Input field and button for directions */}
                         <div htmlFor="direction">Directions</div>
                         <ul className="DirectionsList">
+                        {/* Performing the same functionality as ingredients except with directions. */}
                             {this.props.directions.map(singleDirection => {
                                 if (singleDirection.recipeId === parseInt(this.props.match.params.recipeId)) {
                                     if (singleDirection.id === this.state.DirectionToEdit.id) {
@@ -225,6 +227,7 @@ export default class RecipeDetailsForm extends Component {
                             className="btn">
                             Next Direction</button>
                         <div className="returnButton">
+                            {/* Giving the user an option to delete the recipe at this point in case they decide to not complete it. */}
                             <button
                                 type="submit"
                                 onClick={() =>
