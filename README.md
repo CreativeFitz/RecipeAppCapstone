@@ -7,7 +7,7 @@ experiences.
 ### Deployed Bon-App-eptite URL - <http://bfrecipeapp.herokuapp.com>
 
 ## Login/Register
-![NewUser] (src/components/Readme/NewUser.png)
+![NewUser] (/src/components/Readme/NewUser.png)
 
 
 
